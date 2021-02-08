@@ -9,18 +9,13 @@
         <link rel="stylesheet" type="text/css"
             href="/css/bootstrap/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="/css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
         <script type="module" src="js/menuEvents.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
     <body>
-            <!-- Email form response -->
-            {{#messageSent}}
-                <div class="bigSpace"></div>
-                <p class="lead">{{messageSent}}</p>
-                <div class="bigSpace"></div>
-            {{/messageSent}}
+
 
             <!-- The site titles and opening paragraphs -->
             <div id="Opening" class="jumbotron">
@@ -28,47 +23,31 @@
                 <h2 style="border-top-left-radius: 0;
                     border-top-right-radius: 0; padding: 60px;" class="display-4">Scott Cooper
                     <br>
-                    {{#paragraphData}}
-                    <!-- Both titles -->
-                    {{#bothProjectTypesEnabled}}
-                    <p class="subHeading">{{webDevTitle}} / {{gameDevTitle}}</p>
-                    {{/bothProjectTypesEnabled}}
-                    {{^bothProjectTypesEnabled}}
-                    
 
+                    <!-- Titles -->
+                    <p class="subHeading" id="bothTitles">Game Programmer / Full Stack Developer</p>
 
+                    <p class="subHeading" id="gameDevTitle">Game Programmer</p>
 
-                    <!-- Game dev title -->
-                    {{#gameProjectsEnabled}}
-                     <p class="subHeading">{{gameDevTitle}}</p>
-                    {{/gameProjectsEnabled}}
+                    <p class="subHeading" id="webDevTitle">Full Stack Developer</p>
 
-                    <!-- Web dev title -->
-                    {{#websiteProjectsEnabled}}
-                    <p class="subHeading">{{webDevTitle}}</p>
-                    {{/websiteProjectsEnabled}}
-
-
-                    {{/bothProjectTypesEnabled}}
-
-
-                    {{/paragraphData}}
-
-                    
 
                 </h2>
-                {{#paragraphData}}
-                <p class="lead">{{introParagraph1}}</p>
 
+                <!--paragraph data-->
+                <p class="lead" id="webDevIntro">Welcome to my portfolio. I''m a Web Developer experienced in the front-end and back-end side of web development.
+                    My motivation to program led me to a passion for developing and designing websites.</p>
+                
+                <p class="lead" id="gameDevIntro">Welcome to my portfolio. I''m an experienced programmer in game development.</p>
 
-                <p class="lead">{{introParagraph2}}</p>
-                {{/paragraphData}}
+                <p class="lead" id="bothIntros">Welcome to my portfolio. I''m experienced in game and web development.</p>
+
+                <p class="lead">Scroll below to check out my different projects and skillset! (Repositories included!)</p>
 
 
                 <!-- Web framework icons -->
-                {{#websiteProjectsEnabled}}
 
-                <div class="flex-container">
+                <div class="flex-container" id="webIcons">
                         <div><img src="images/HTML5Logo.png" class="framework grow"></div>
                         <div><img src="images/CSS3Logo.png" class="framework grow"></div>
                         <div><img src="images/ReactLogo.png" class="framework grow"></div>
@@ -76,23 +55,18 @@
                         <div><img src="images/NodeJSLogo.png" class="framework grow"></div>
                 </div>
                 
-                {{/websiteProjectsEnabled}}
-
                 <!-- Game engine icons -->
-                {{#gameProjectsEnabled}}
 
-                <div class="flex-container">
+                <div class="flex-container" id="gameIcons">
                         <div><img src="images/unityLogo.png" class="framework"></div>
                         <div><img src="images/unrealLogo.png" class="framework"></div>
                 </div>
-                
-                {{/gameProjectsEnabled}}
 
             </div>
 
 
 
-            {{#websiteProjectsEnabled}}
+            <!--#websiteProjectsEnabled-->
             <div id="websites_Scroll">
             </div>
             </div>
@@ -107,32 +81,22 @@
 
 
                 <h2 style="border-radius: 0px; padding-top:0px">Website Projects</h2>
-                {{#paragraphData}}
-                <p style="text-align: center;" class="lead">{{webDevParagraph}}</p>
-                {{/paragraphData}}
+                <p style="text-align: center;" class="lead">
+                    The below projects were created in frameworks like Express, React and Django. All projects have either relational or document databases as well.
+                </p>
 
-                <!-- Big projects featured first -->
-                    <div class="flex-container">
-                        {{#websiteData}}
-                        {{#isGame}}
-                        {{/isGame}}
-                        {{^isGame}}
+                <!-- Web apps -->
+                    <div class="flex-container" id="webProjectContainer">
+
 
                                 <div class="projectBox">
                                 <!-- Show either thumbnail image or first regular image -->
-                                {{#thumbnail_string}}
-                                <img src={{thumbnail_string}} class="bigImg"
+                                <img src="" class="bigImg"
                                     style="display: block;">
-                                {{/thumbnail_string}}
-                                {{^thumbnail_string}}
-                                <img src={{image0_string}} class="bigImg"
-                                    style="display: block;">
-                                {{/thumbnail_string}}
 
-                                <button class="bigBtn" value={{id}}>{{name}}</button>
+                                <button class="bigBtn" value=""><!--name--></button>
                                 </div>
-                        {{/isGame}}
-                        {{/websiteData}}
+
                     </div>
 
             <div class="smallSpace"></div>
@@ -152,22 +116,18 @@
                             <h2 class="display-4">Web Developer Skills </h2>
                         </div>
                         <div class ="col-lg">
-                                {{#paragraphData}}
                                 <ul class="list-group">
-                                    {{#webDevSkills}}
-                                    
-                                        <li class="list-group-item
-                                            list-group-item-dark
-                                            colour">{{{name}}}</li>
+                                        <li class="list-group-item list-group-item-dark colour"><i>Frontend:</i> React, DOM </li>
+                                        <li class="list-group-item list-group-item-dark colour"><i>Backend:</i> Express, Django</li>
+                                        <li class="list-group-item list-group-item-dark colour"><i>Databases:</i> MySQL, MongoDB, Sequelize</li>
+                                        <li class="list-group-item list-group-item-dark colour"><i>Other Frameworks:</i> Bootstrap, jQuery Mobile</li>
+                                        <li class="list-group-item list-group-item-dark colour"><i>Languages:</i> HTML5, CSS3, Javascript, Python</li>
 
 
-                                    {{/webDevSkills}}
                                 </ul>
-                                {{/paragraphData}}
 
                         </div>
                         
-                    </div>
                 </div>
             </div>
 
@@ -178,48 +138,36 @@
             <div class="bigSpace">
             </div>
 
-            {{/websiteProjectsEnabled}}
+            <!--/websiteProjectsEnabled-->
 
-            {{#gameProjectsEnabled}}
+            <!--#gameProjectsEnabled-->
             <div class="bigSpace">
             </div>
-            {{/gameProjectsEnabled}}
+            <!--/gameProjectsEnabled-->
 
 
             <div id="games_Scroll">
 
 
-                {{#gameProjectsEnabled}}
+                <!--#gameProjectsEnabled-->
                 <!-- Game Menu -->
                 <div class="wave" style="height: 75px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.99 C150.00,150.00 349.20,-49.99 500.00,49.99 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #002736;"></path></svg></div>
 
                 <div id="games">
                     <h2>Game Projects</h2>
-                    {{#paragraphData}}
-                    <p style="text-align: center;" class="lead">{{gameDevParagraph}}</p>
-                    {{/paragraphData}}
+                    <p style="text-align: center;" class="lead">
+                        Below are projects I've programmed in different game engines. I also have experience using no engine with OpenGL.
+                    </p>
 
-                    <!-- Big projects featured first -->
-                    <div class="flex-container">
-                            {{#websiteData}}
-                            {{#isGame}}
+                    <!-- Game projects -->
+                    <div class="flex-container" id="gameProjectContainer">
+                        <div class="projectBox">
+                            <!-- Show either thumbnail image or first regular image -->
+                            <img src="" class="bigImg"
+                                style="display: block;">
 
-                                <div class="projectBox">
-                                        {{#thumbnail_string}}
-                                        <img src={{thumbnail_string}} class="bigImg"
-                                            style="display: block;">
-                                        {{/thumbnail_string}}
-                                        {{^thumbnail_string}}
-                                        <img src={{image0_string}} class="bigImg"
-                                            style="display: block;">
-                                        {{/thumbnail_string}}
-                                    <button class="bigBtn" value={{id}}>{{name}}</button>
-                                </div>
-                            {{/isGame}}
-                            {{^isGame}}
-
-                            {{/isGame}}
-                            {{/websiteData}}
+                            <button class="bigBtn" value=""><!--name--></button>
+                            </div>
                         
                     </div>
 
@@ -237,32 +185,28 @@
                             <h2 class="display-4">Game Programmer Skills </h2>
                         </div>
                         <div class ="col-lg">
-                                {{#paragraphData}}
                                 <ul class="list-group">
-                                    {{#gameDevSkills}}
                                     
-                                        <li class="list-group-item
-                                            list-group-item-dark
-                                            colour">{{{name}}}</li>
+                                        <li class="list-group-item list-group-item-dark colour"><i>Engines:</i> Unreal, Unity, GameMaker Studio</li>
+                                        <li class="list-group-item list-group-item-dark colour"><i>Languages:</i> C++, C#, Java</li>
+                                        <li class="list-group-item list-group-item-dark colour">OpenGL</li>
 
-
-                                    {{/gameDevSkills}}
                                 </ul>
-                                {{/paragraphData}}
 
                         </div>
                         
                     </div>
                 </div>
 
-                {{/gameProjectsEnabled}}
+                <!--/gameProjectsEnabled-->
 
 
 
                 <!-- Project Information, Images and Links -->
 
-                {{#websiteData}}
-                <div id={{id}} style="display: none;">
+                <!--#websiteData-->
+                <template>
+                <div id="" style="display: none;">
 
 
                     <!--Show row of images, videos and a description at the end. !-->
@@ -275,8 +219,8 @@
                                 border-bottom-right-radius: 0;">
 
                                 <h2 style="padding: 1px; padding-top:0px;
-                                margin-bottom:none; width:100%;">{{name}}
-                                <button class="close" value={{id}}>X</button>
+                                margin-bottom:none; width:100%;"><!--name-->
+                                <button class="close" value=<!--id-->>X</button>
                                 </h2>
 
 
@@ -285,11 +229,11 @@
                                         <!-- Column for an image/video preview -->
                                         <div class="col-md">
 
-                                            {{#video_string}}
+                                            <!--#video_string-->
 
                                             <div class="divider">
                                                 <iframe width="320" height="256"
-                                                    src={{video_string}}
+                                                    src=""
                                                     frameborder="0"
                                                     allow="accelerometer;
                                                     autoplay; encrypted-media;
@@ -298,17 +242,17 @@
                                                     allowfullscreen></iframe>
                                             </div>
 
-                                            {{/video_string}}
+                                            <!--/video_string-->
 
                                             <div class="divider">
                                                 <button class="prevPreview"
-                                                id={{id}}_prev><i class="fa fa-angle-left" style="color:white"></i>
+                                                id=<!--id-->_prev><i class="fa fa-angle-left" style="color:white"></i>
                                                 </button>
                                                 <button class="nextPreview"
-                                                id={{id}}_next><i class="fa fa-angle-right" style="color:white"></i>
+                                                id=<!--id-->_next><i class="fa fa-angle-right" style="color:white"></i>
                                                 </button>
-
-                                                <img src={{image0_string}}
+                                                <!--image0_string-->
+                                                <img src="" 
                                                     class="previewImage">
                                             </div>
 
@@ -322,7 +266,7 @@
                                             center;">
                                             <span>
                                                 <button class="changePreview"
-                                                    value=0 id={{id}}_preview>
+                                                    value=0 id=<!--id-->_preview>
                                                     <br><br><br>
                                                 </button>
                                                 <button class="changePreview"
@@ -351,10 +295,10 @@
                                         <!--Description -->
                                         <div class="col-lg">
                                             <br>
-                                            {{description0}}
+                                            <!--description0-->
                                             <br>
                                             <br>
-                                            {{description1}}
+                                            <!--description1-->
                                             <br>
                                             <br>
                                         </div>
@@ -372,7 +316,7 @@
                                  
                                 <div class="col-sm-2">
 
-                                    <img src={{frameworkImage_string}}
+                                    <img src=""
                                         
                                         class="framework">
 
@@ -383,33 +327,32 @@
 
 
                                 <div class="col-sm-2">
-                                    {{#frameworkImage1_string}}
+                                    <!--#frameworkImage1_string-->
 
-                                    <img src={{frameworkImage1_string}}
+                                    <img src=""
                                         
                                         class="framework">
-                                    {{/frameworkImage1_string}}
+                                    <!--/frameworkImage1_string-->
 
                                 </div>
 
                                 <!--Link to website and/or repository -->
                                 <div class="col-lg" style="text-align:center;">
-                                    {{#url}}
+                                    <!--#url-->
                                     <br>
                                     <br>
-                                    <a href={{url}} class="siteLink"
-                                        target="_blank"> Visit Site</a>
+                                    <a href="" class="siteLink" target="_blank"> Visit Site</a>
                                     <br>
                                     <br>
-                                    {{/url}}
-                                    {{#repoLink}}
-                                    <a href={{repoLink}}
+                                    <!--/url-->
+                                    <!--#repoLink-->
+                                    <a href=""
                                         class="repoLink"
                                         target="_blank"> GitHub <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
                                     <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
 
                                     </a>
-                                    {{/repoLink}}
+                                    <!--/repoLink-->
                                     <br>
                                     <br>
                                 </div>
@@ -418,23 +361,24 @@
                         </div>
 
                         <div class="itemStrings" style="display: none;">
-                            <p>{{video_string}}</p>
-                            <p>{{image0_string}}</p>
-                            <p>{{image1_string}}</p>
-                            <p>{{image2_string}}</p>
-                            <p>{{image3_string}}</p>
+                            <p><!--video_string--></p>
+                            <p><!--image0_string--></p>
+                            <p><!--image1_string--></p>
+                            <p><!--image2_string--></p>
+                            <p><!--image3_string--></p>
                         </div>
                     </div>
                 </div>
-                {{/websiteData}}
+                </template>
+                <!--/websiteData-->
 
             </div>
 
 
-            {{#gameProjectsEnabled}}
+            <!--#gameProjectsEnabled-->
             <div class="bigSpace">
             </div>
-            {{/gameProjectsEnabled}}
+            <!--/gameProjectsEnabled-->
 
             <div class="wave" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-98.53,52.59 C150.00,150.00 649.21,56.54 574.15,70.35 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #002736;"></path></svg></div>
             <div id="contactMe" class="main">

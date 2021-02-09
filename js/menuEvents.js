@@ -9,9 +9,14 @@ import {
   HideProjectsBasedOnURL,
 } from "./menuFunctions.js";
 
+import { makeProjects } from "./projects.js";
+
 document.addEventListener("DOMContentLoaded", () => {
   //Show stuff based on the URL
   HideProjectsBasedOnURL();
+
+  var projects = makeProjects();
+  console.log(projects);
 
   //Button click events ---------------------------------------------------------------------------------------------
 

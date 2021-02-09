@@ -6,9 +6,13 @@ import {
   ChangeClassDisplay,
   MakeArrowsInvisible,
   MakeArrowsVisible,
+  HideProjectsBasedOnURL,
 } from "./menuFunctions.js";
 
 document.addEventListener("DOMContentLoaded", () => {
+  //Show stuff based on the URL
+  HideProjectsBasedOnURL();
+
   //Button click events ---------------------------------------------------------------------------------------------
 
   var lastMenu = "#websites";

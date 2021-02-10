@@ -6,11 +6,12 @@
             rel="stylesheet"
             integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
             crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css"
-            href="/css/bootstrap/bootstrap.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <script type="module" src="js/menuEvents.js"></script>
+        <link rel="icon" 
+      type="image/png" 
+      href="images/favicon.png">
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
@@ -34,7 +35,7 @@
 
                 </h2>
 
-                <!--paragraph data-->
+                <!--Paragraphs (Only one of the first three will show up as the first paragraph)-->
                 <p class="lead" id="webDevIntro">Welcome to my portfolio. I''m a Web Developer experienced in the front-end and back-end side of web development.
                     My motivation to program led me to a passion for developing and designing websites.</p>
                 
@@ -85,10 +86,10 @@
                     The below projects were created in frameworks like Express, React and Django. All projects have either relational or document databases as well.
                 </p>
 
-                <!-- Web apps -->
+                <!-- Website projects -->
                     <div class="flex-container" id="webProjectContainer">
 
-                        <template>
+                        <template id="projectButtonTemplate">
                                 <div class="projectBox">
                                 <!-- Show either thumbnail image or first regular image -->
                                 <img src="" class="bigImg"
@@ -156,13 +157,6 @@
 
                     <!-- Game projects -->
                     <div class="flex-container" id="gameProjectContainer">
-                        <div class="projectBox">
-                            <!-- Show either thumbnail image or first regular image -->
-                            <img src="" class="bigImg"
-                                style="display: block;">
-
-                            <button class="bigBtn" value=""><!--name--></button>
-                            </div>
                         
                     </div>
 

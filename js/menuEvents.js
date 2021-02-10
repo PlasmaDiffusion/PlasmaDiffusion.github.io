@@ -11,13 +11,17 @@ import {
 
 import { makeProjects } from "./projects.js";
 
+import {
+  createProjectMenus,
+  createProjectWindows,
+} from "./projectFunctions.js";
+
 document.addEventListener("DOMContentLoaded", () => {
   //Show stuff based on the URL
   HideProjectsBasedOnURL();
 
   var projects = makeProjects();
-  console.log(projects);
-
+  createProjectMenus(projects);
   //Button click events ---------------------------------------------------------------------------------------------
 
   var lastMenu = "#websites";

@@ -15,7 +15,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
-    <body>
+    <body id="body">
 
 
             <!-- The site titles and opening paragraphs -->
@@ -191,178 +191,176 @@
 
 
 
+         </div>
+
+
         </div>
 
                 <!-- Project Information, Images and Links -->
 
                 <!--#websiteData-->
-                <template id="projectData">
-                <div id="-1" style="display: none;">
+        <template id="projectWindowTemplate">
+            <div id="-1" style="display: none;">
 
 
-                    <!--Show row of images, videos and a description at the end. !-->
-                    <div class="project">
+                <!--Show row of images, videos and a description at the end. !-->
+                <div class="project">
 
-                        <div class="container">
+                    <div class="container">
 
-                            <div class="row"
-                                style="border-bottom-left-radius: 0;
-                                border-bottom-right-radius: 0;">
+                        <div class="row"
+                            style="border-bottom-left-radius: 0;
+                            border-bottom-right-radius: 0;">
 
-                                <h2 style="padding: 1px; padding-top:0px;
-                                margin-bottom:none; width:100%;"><!--name-->
-                                <button class="close" value=<!--id-->>X</button>
-                                </h2>
+                            <h2  id="nameTemplate" style="padding: 1px; padding-top:0px;
+                            margin-bottom:none; width:100%;"><!--name-->
+                            <button class="close" id="closeTemplate" value="">X</button>
+                            </h2>
 
 
-                                <div class="col-lg">
-                                    <div class="container">
-                                        <!-- Column for an image/video preview -->
-                                        <div class="col-md">
+                            <div class="col-lg">
+                                <div class="container">
+                                    <!-- Column for an image/video preview -->
+                                    <div class="col-md">
 
-                                            <!--#video_string-->
-
-                                            <div class="divider">
-                                                <iframe width="320" height="256"
-                                                    src=""
-                                                    frameborder="0"
-                                                    allow="accelerometer;
-                                                    autoplay; encrypted-media;
-                                                    gyroscope;
-                                                    picture-in-picture"
-                                                    allowfullscreen></iframe>
-                                            </div>
-
-                                            <!--/video_string-->
-
-                                            <div class="divider">
-                                                <button class="prevPreview"
-                                                id=<!--id-->_prev><i class="fa fa-angle-left" style="color:white"></i>
-                                                </button>
-                                                <button class="nextPreview"
-                                                id=<!--id-->_next><i class="fa fa-angle-right" style="color:white"></i>
-                                                </button>
-                                                <!--image0_string-->
-                                                <img src="" 
-                                                    class="previewImage">
-                                            </div>
-
+                                        <!--Video-->
+                                        <div class="divider">
+                                            <iframe width="320" height="256"
+                                                src=""
+                                                frameborder="0"
+                                                allow="accelerometer;
+                                                autoplay; encrypted-media;
+                                                gyroscope;
+                                                picture-in-picture"
+                                                id="videoTemplate"
+                                                allowfullscreen></iframe>
                                         </div>
 
-
-                                        <br>
-                                        <br>
-                                        <!-- Column for current image radio like buttons -->
-                                        <div class="col" style="text-align:
-                                            center;">
-                                            <span>
-                                                <button class="changePreview"
-                                                    value=0 id=<!--id-->_preview>
-                                                    <br><br><br>
-                                                </button>
-                                                <button class="changePreview"
-                                                    value=1>
-                                                    <br><br><br>
-                                                </button>
-                                                <button class="changePreview"
-                                                    value=2>
-                                                    <br><br><br>
-                                                </button>
-                                                <button class="changePreview"
-                                                    value=3> <br><br><br>
-                                                </button>
-                                            </span>
+                                        <!--Preview image slideshow-->
+                                        <div class="divider">
+                                            <button class="prevPreview"
+                                            id="_nextTemplate"><i class="fa fa-angle-left" style="color:white"></i>
+                                            </button>
+                                            <button class="nextPreview"
+                                            id="_prevTemplate"><i class="fa fa-angle-right" style="color:white"></i>
+                                            </button>
+                                            <!--image0_string-->
+                                            <img src="" id="previewImageTemplate"
+                                                class="previewImage">
                                         </div>
-                                        <br>
-                                        <br>
-
 
                                     </div>
-                                </div>
 
-                                <div class="col-xl"> <!--Description and links-->
-                                    <div class="container">
 
-                                        <!--Description -->
-                                        <div class="col-lg">
-                                            <br>
-                                            <!--description0-->
-                                            <br>
-                                            <br>
-                                            <!--description1-->
-                                            <br>
-                                            <br>
-                                        </div>
+                                    <br>
+                                    <br>
+                                    <!-- Column for current image radio like buttons -->
+                                    <div class="col" style="text-align:
+                                        center;">
+                                        <span>
+                                            <button class="changePreview"
+                                                value=0 id=""><!--id_preview-->
+                                                <br><br><br>
+                                            </button>
+                                            <button class="changePreview"
+                                                value=1>
+                                                <br><br><br>
+                                            </button>
+                                            <button class="changePreview"
+                                                value=2>
+                                                <br><br><br>
+                                            </button>
+                                            <button class="changePreview"
+                                                value=3> <br><br><br>
+                                            </button>
+                                        </span>
                                     </div>
-
+                                    <br>
+                                    <br>
 
 
                                 </div>
                             </div>
-                            <div class="row" style="border-top-left-radius: 0;
-                                border-top-right-radius: 0;">
 
+                            <div class="col-xl"> <!--Description and links-->
+                                <div class="container">
 
-                                <!-- Framework icons -->
-                                 
-                                <div class="col-sm-2">
-
-                                    <img src=""
-                                        
-                                        class="framework">
-
+                                    <!--Description -->
+                                    <div class="col-lg">
+                                        <br>
+                                        <span id="description0Template"></span>
+                                        <br>
+                                        <br>
+                                        <span id="description1Template"></span>
+                                        <br>
+                                        <br>
+                                    </div>
                                 </div>
 
-                                
-                                <div class="col-sm-1"></div>
 
-
-                                <div class="col-sm-2">
-                                    <!--#frameworkImage1_string-->
-
-                                    <img src=""
-                                        
-                                        class="framework">
-                                    <!--/frameworkImage1_string-->
-
-                                </div>
-
-                                <!--Link to website and/or repository -->
-                                <div class="col-lg" style="text-align:center;">
-                                    <!--#url-->
-                                    <br>
-                                    <br>
-                                    <a href="" class="siteLink" target="_blank"> Visit Site</a>
-                                    <br>
-                                    <br>
-                                    <!--/url-->
-                                    <!--#repoLink-->
-                                    <a href=""
-                                        class="repoLink"
-                                        target="_blank"> GitHub <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
-
-                                    </a>
-                                    <!--/repoLink-->
-                                    <br>
-                                    <br>
-                                </div>
 
                             </div>
                         </div>
+                        <div class="row" style="border-top-left-radius: 0;
+                            border-top-right-radius: 0;">
 
-                        <div class="itemStrings" style="display: none;">
-                            <p><!--video_string--></p>
-                            <p><!--image0_string--></p>
-                            <p><!--image1_string--></p>
-                            <p><!--image2_string--></p>
-                            <p><!--image3_string--></p>
+
+                            <!-- Framework icons -->
+                             
+                            <div class="col-sm-2">
+
+                                <img src=""
+                                    id="frameworkImage0Template"
+                                    class="framework">
+
+                            </div>
+
+                            
+                            <div class="col-sm-1"></div>
+
+
+                            <div class="col-sm-2">
+
+                                <img src=""
+                                    id="frameworkImage1Template"
+                                    class="framework">
+
+                            </div>
+
+                            <!--Link to website and/or repository -->
+                            <div class="col-lg" style="text-align:center;">
+                                <!--#url-->
+                                <br>
+                                <br>
+                                <a href="" class="siteLink" target="_blank"> Visit Site</a>
+                                <br>
+                                <br>
+                                <!--/url-->
+                                <!--#repoLink-->
+                                <a href=""
+                                    class="repoLink"
+                                    target="_blank"> GitHub <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+
+                                </a>
+                                <!--/repoLink-->
+                                <br>
+                                <br>
+                            </div>
+
                         </div>
                     </div>
-                </div>
-                </template>
 
+                    <div class="itemStrings" style="display: none;">
+                        <p><!--video_string--></p>
+                        <p><!--image0_string--></p>
+                        <p><!--image1_string--></p>
+                        <p><!--image2_string--></p>
+                        <p><!--image3_string--></p>
+                    </div>
+                </div>
             </div>
+            </template>
 
 
             <div class="bigSpace">

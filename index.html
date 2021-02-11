@@ -398,16 +398,22 @@
 
             <div style="padding-bottom: 128px;"></div>
             <!-- Contact form -->
-            <form id="emailForm" action="#top" method="POST">
+            <form id="emailForm" action="https://formspree.io/f/mleokrwp"  method="POST">
                 <label for="name" class="lead">Name:</label><br>
-                <input type="text" class="smallInput" name="name" placeholder="Full Name">
+                <input type="text" class="smallInput" name="name"  placeholder="Full Name">
                 <br>
                 <label for="email" class="lead">Email:<i>*</i></label><br>
                 <input type="text" class="smallInput" type="email" placeholder="example@gmail.com" name="email" required>
                 <br>
-                <label for="email" class="lead">Message:<i>*</i></label><br>
-                <textarea type="text" id="emailMsg" rows="12" cols="64" class="largeInput" placeholder="Reason for contacting me..." name="body" required></textarea>
+                <label for="message" class="lead">Message:<i>*</i></label><br>
+                <textarea type="text" name="message" id="emailMsg" rows="12" cols="64" class="largeInput" placeholder="Reason for contacting me..." name="body" required></textarea>
                 <br> <br>
+                <input
+                type="hidden"
+                name="_subject"
+                value="Portfolio Message"
+              />
+
                 <input type="submit" class="lead" value="Send"> <br><br>
             </form>
 

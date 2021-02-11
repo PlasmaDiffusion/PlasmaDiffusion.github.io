@@ -14,8 +14,6 @@ export function ChangeClassDisplay(className, display) {
 export function HideProjectsBasedOnURL() {
   var url = window.location.search;
 
-  console.log(url);
-
   if (url.includes("all")) {
     //Show both games and websites
     ChangeElementDisplay("webDevTitle", "none");
@@ -75,6 +73,7 @@ export function ChangePreviewImage(button) {
 
   //Check for video
   let videoSrc = imageNodes.childNodes[1].innerHTML;
+  console.log(videoSrc);
 
   let offset = 1;
   if (videoSrc) offset = 0;
@@ -105,7 +104,7 @@ export function CheckIfVideoOrImage(buttonIndex, imageSrcs) {
     document.querySelectorAll("img").forEach((image) => {
       if (image.className == "previewImage") {
         if (imageSrcs[buttonIndex]) {
-          //Make there's an actual image to show
+          //Make sure there's an actual image to show
           image.src = imageSrcs[buttonIndex];
         }
         image.style.display = "block";

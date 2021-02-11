@@ -37,7 +37,7 @@ export function makeProjects() {
       false,
       "https://shopping-mockup.herokuapp.com/",
       "https://github.com/PlasmaDiffusion/Shopping-Site",
-      "A mockup for a shopping website. Users can search for products, and if they sign up they can add them to their cart and place an order.', 'The main focus of this project is React. It also uses NodeJS at the backend, using Sequelize to manage a MySQL database.",
+      "A mockup for a shopping website. Users can search for products, and if they sign up they can add them to their cart and place an order.",
       "The main focus of this project is React. It also uses NodeJS at the backend, using Sequelize to manage a MySQL database.",
       null,
       "images/ShoppingSiteThumbnail.png",
@@ -64,7 +64,8 @@ export function makeProjects() {
       "images/pizzaMenuThumbnail.png",
       [
         "images/pizzaMenu0.png",
-        "images/pizzaMenu1.png,images/pizzaMenu2.png",
+        "images/pizzaMenu1.png",
+        "images/pizzaMenu2.png",
         "images/pizzaMenu3.png",
       ],
       ["images/djangoLogo.png", null]
@@ -135,7 +136,7 @@ export function makeProjects() {
       6,
       "Robots & Things",
       true,
-      "https://robots-and-things.manakeep.com/",
+      "https://robotsandthingsgame.com/",
       "",
       "A 3D platformer game that mixes open exploration and linear levels together.",
       "I'm the programmer for this project, using the Unreal engine. I also have done a large chunk of the level design and overall game design.",

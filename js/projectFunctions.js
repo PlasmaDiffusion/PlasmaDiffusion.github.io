@@ -67,16 +67,88 @@ function generateProjectWindow(project) {
 
   //Change elements to data they need to be
   setHeading(newProjectWindow, project);
+  setLinks(newProjectWindow, project);
+  setDescriptions(newProjectWindow, project);
+  setImages(newProjectWindow, project);
 
   parent.appendChild(newProjectWindow);
 }
 
 //Functions for dynamically setting information on a project -----------------------------------------------------------
 function setHeading(newProjectWindow, project) {
+  //Set the close button value
   var closeBtn = newProjectWindow.getElementsByTagName("button")[0];
   closeBtn.value = project.id;
+  //Set the title
   var name = newProjectWindow.getElementsByTagName("H2")[0];
   name.innerHTML = project.name;
   name.appendChild(closeBtn);
   name.id = "name" + project.id;
+}
+
+function setLinks(newProjectWindow, project) {
+  //Set the url link
+  var links = newProjectWindow.getElementsByTagName("a");
+  links[0].href = project.url;
+
+  //Hide repository link if not there
+  if (project.repoLink) links[1].href = project.repoLink;
+  else links[1].display = "none";
+}
+
+function setDescriptions(newProjectWindow, project) {
+  //Set the project descriptions (These should always exist.)
+  var descriptionTags = newProjectWindow.getElementsByTagName("span");
+  //The second and third span is the actual description
+  descriptionTags[1].innerHTML = project.description0;
+  descriptionTags[2].innerHTML = project.description1;
+}
+
+function setImages(newProjectWindow, project) {
+  var images = newProjectWindow.getElementsByTagName("img");
+
+  //First image is the preview image
+  images[0].src = project.imageStrings[0];
+
+  //Second and third images are the framework ones. There will always be one framework image, but not always two.
+  images[1].src = project.frameworkStrings[0];
+  if (project.frameworkStrings[2]) images[2].src = project.frameworkStrings[1];
+  else images[2].style.display = "none";
+
+  //Store the other image strings in <p> tags to be used later when image preview buttons are clicked
+  var imageStringSpots = newProjectWindow.getElementsByTagName("p");
+
+  //Index 0 is for a video string
+  if (project.videoString) imageStringSpots[0].innerHTML = project.videoString;
+  else imageStringSpots[0].innerHTML = "";
+
+  //Index 1-4 is for images of the project.
+  for (let i = 1; i < 5; i++) {
+    if (project.imageStrings[i - 1])
+      imageStringSpots[i].innerHTML = project.imageStrings[i - 1];
+  }
+
+  //Manage preview buttons (Note that there's two buttons prior)
+
+  //Give the first preview button the appropriate id
+  var previewBtns = newProjectWindow.getElementsByTagName("button");
+  previewBtns[3].id = project.id.toString() + "_preview";
+
+  //Remove preview buttons that don't need to be there
+  for (let i = 3; i < previewBtns.length; i++) {
+    if (!project.imageStrings[i - 3]) {
+      //Offset index by 1 if there's a video project
+      let index = project.videoString ? i + 1 : i;
+      if (previewBtns[index]) {
+        previewBtns[index].className = "changePreviewEmpty";
+        previewBtns[index].style.display = "none";
+      }
+    }
+  }
+
+  //Put the video url in if it exists
+  if (project.videoString) {
+    var video = newProjectWindow.getElementsByTagName("iframe")[0];
+    video.src = project.videoString;
+  }
 }

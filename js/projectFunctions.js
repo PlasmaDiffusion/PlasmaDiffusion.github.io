@@ -112,7 +112,7 @@ function setImages(newProjectWindow, project) {
 
   //Second and third images are the framework ones. There will always be one framework image, but not always two.
   images[1].src = project.frameworkStrings[0];
-  if (project.frameworkStrings[2]) images[2].src = project.frameworkStrings[1];
+  if (project.frameworkStrings[1]) images[2].src = project.frameworkStrings[1];
   else images[2].style.display = "none";
 
   //Store the other image strings in <p> tags to be used later when image preview buttons are clicked

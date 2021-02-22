@@ -199,7 +199,8 @@ img {
 
 .bigImg {
   width: 256px;
-  height: 256px; }
+  height: 256px;
+  border-radius: 8px; }
 
 .framework {
   padding: 32px;
@@ -244,6 +245,10 @@ img {
   margin: auto;
   align-content: space-between; }
 
+#webIcons,
+#gameIcons {
+  max-width: 100%; }
+
 .flex-container > div {
   flex: none;
   margin-left: 20px;
@@ -265,7 +270,8 @@ img {
   cursor: pointer;
   border-radius: 0px;
   opacity: 0%;
-  transition: opacity 0.5s; }
+  transition: opacity 0.5s;
+  border-radius: 8px; }
 
 .btn {
   width: 126px;
@@ -418,13 +424,15 @@ input[type="submit"]:hover {
 
   .bigImg {
     width: 128px;
-    height: 128px; }
+    height: 128px;
+    border-radius: 4px; }
 
   .bigBtn {
     font-size: 1rem;
     width: 128px;
     height: 128px;
-    bottom: 128px; } }
+    bottom: 128px;
+    border-radius: 4px; } }
 @keyframes fade {
   0% {
     opacity: 0; }

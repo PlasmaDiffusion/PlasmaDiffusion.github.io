@@ -36,7 +36,7 @@ export function loadProjectData(projects) {
 }
 
 function generateProjectButton(project, parentId) {
-  //Get template and parent node
+  //Clone template and get parent node
   var template = document.getElementById("projectButtonTemplate");
   var parent = document.getElementById(parentId);
   var newProjectImageButton = template.content.firstElementChild.cloneNode(
@@ -52,6 +52,20 @@ function generateProjectButton(project, parentId) {
   //Assign button value and text
   newProjectImageButton.children[1].value = project.id;
   newProjectImageButton.children[1].innerHTML = project.name;
+
+  //Show framework icon over the button
+  var frameworkIcon0 = newProjectImageButton.children[2];
+  var frameworkIcon1 = newProjectImageButton.children[3];
+  frameworkIcon0.src = project.frameworkStrings[0];
+  frameworkIcon1.src = project.frameworkStrings[1];
+
+  //Framework icon to attach to button
+  newProjectImageButton.children[1].appendChild(frameworkIcon0);
+
+  //The second framework icon is optional
+  if (project.frameworkStrings[1])
+    newProjectImageButton.children[1].appendChild(frameworkIcon1);
+  else frameworkIcon1.style.display = "none";
 
   parent.appendChild(newProjectImageButton);
 }

@@ -208,6 +208,10 @@ img {
   width: 128px;
   height: 128px; }
 
+.smallFrameworkIcon {
+  border: none;
+  background-color: none; }
+
 #contactMe {
   text-align: center; }
 

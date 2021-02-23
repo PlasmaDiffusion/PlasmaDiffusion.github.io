@@ -14,30 +14,25 @@ export function ChangeClassDisplay(className, display) {
 export function HideProjectsBasedOnURL() {
   var url = window.location.search;
 
-  if (url.includes("all")) {
-    //Show both games and websites
-    ChangeElementDisplay("webDevTitle", "none");
-    ChangeElementDisplay("gameDevTitle", "none");
+  var introParagraph = document.getElementById("intro");
+  var title = document.getElementById("title");
 
-    ChangeElementDisplay("webDevIntro", "none");
-    ChangeElementDisplay("gameDevIntro", "none");
+  //Show websites and games?
+  if (url.includes("all")) {
+    title.innerHTML = "Full Stack Developer / Game Programmer";
+    introParagraph.innerHTML =
+      "Welcome to my portfolio. I'm an experienced programmer in game development.";
   } else if (url.includes("games")) {
     //Show games only
-    ChangeElementDisplay("webDevTitle", "none");
-    ChangeElementDisplay("bothTitles", "none");
+    title.innerHTML = "Game Programmer";
+    introParagraph.innerHTML =
+      "Welcome to my portfolio. I'm skilled in game and web development.";
 
-    ChangeElementDisplay("bothIntros", "none");
-    ChangeElementDisplay("webDevIntro", "none");
     ChangeElementDisplay("webIcons", "none");
 
     ChangeElementDisplay("websitesOnly", "none");
   } else {
     //Show websites only
-    ChangeElementDisplay("gameDevTitle", "none");
-    ChangeElementDisplay("bothTitles", "none");
-
-    ChangeElementDisplay("gameDevIntro", "none");
-    ChangeElementDisplay("bothIntros", "none");
     ChangeElementDisplay("gameIcons", "none");
 
     ChangeElementDisplay("gamesOnly", "none");

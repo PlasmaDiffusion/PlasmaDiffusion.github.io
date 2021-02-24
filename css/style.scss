@@ -260,10 +260,25 @@ img {
   width: 128px;
   height: 128px;
 }
+
+//Framework icons for when you click on the project button
 .smallFrameworkIcon {
   border: none;
-  background-color: none;
+  background: none;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  top: 192px;
 }
+
+.leftIcon {
+  left: 64px;
+}
+
+.rightIcon {
+  left: 128px;
+}
+
 //--------------------------------------------
 
 //Link at bottom linking to email
@@ -370,7 +385,7 @@ img {
 }
 
 //Grey scale images
-.grayScale {
+.greyScale {
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
 }
@@ -530,6 +545,24 @@ input[type="submit"]:hover {
 
   .smallSpace {
     padding-bottom: 32px;
+  }
+
+  //Framework icons for when you click on the project button
+  .smallFrameworkIcon {
+    border: none;
+    background: none;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: 96px;
+  }
+
+  .leftIcon {
+    left: 32px;
+  }
+
+  .rightIcon {
+    left: 64px;
   }
 }
 

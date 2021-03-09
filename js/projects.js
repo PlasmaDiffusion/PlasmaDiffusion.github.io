@@ -38,7 +38,7 @@ export function makeProjects() {
       "https://shopping-mockup.herokuapp.com/",
       "https://github.com/PlasmaDiffusion/Shopping-Site",
       "A mockup for a shopping/ecommerce website. Users can search for products, and if they sign up they can add them to their cart and place an order.",
-      "The project uses React at the frontend. It also uses NodeJS at the backend, using Sequelize to manage a MySQL database. TDD is additionally present, with Mocha Testing Library.",
+      "The project uses React at the frontend. It also uses NodeJS at the backend, using Sequelize to manage a MySQL database. TDD is additionally present, with Mocha and Testing Library.",
       null,
       "images/ShoppingSiteThumbnail.png",
       [

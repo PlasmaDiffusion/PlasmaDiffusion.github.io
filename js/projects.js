@@ -37,8 +37,8 @@ export function makeProjects() {
       false,
       "https://shopping-mockup.herokuapp.com/",
       "https://github.com/PlasmaDiffusion/Shopping-Site",
-      "A mockup for a shopping website. Users can search for products, and if they sign up they can add them to their cart and place an order.",
-      "The main focus of this project is React. It also uses NodeJS at the backend, using Sequelize to manage a MySQL database.",
+      "A mockup for a shopping/ecommerce website. Users can search for products, and if they sign up they can add them to their cart and place an order.",
+      "The project uses React at the frontend. It also uses NodeJS at the backend, using Sequelize to manage a MySQL database. TDD is additionally present, with Mocha Testing Library.",
       null,
       "images/ShoppingSiteThumbnail.png",
       [
@@ -101,7 +101,7 @@ export function makeProjects() {
       "https://genealogy-site.herokuapp.com/",
       "https://github.com/PlasmaDiffusion/Genealogy-Site",
       "A genealogy based website made for a client. Admins can submit data on families and individual people through forms. Anyone can view the data entered on specific families.",
-      "This project was made primarily to get acquainted with React. It also makes use of MongoDB with NodeJS.",
+      "This project was made primarily to get acquainted with React. It also makes use of MongoDB with NodeJS. TDD is used too, with Mocha Testing Library.",
       null,
       "images/GenealogySiteThumbnail.png",
       [

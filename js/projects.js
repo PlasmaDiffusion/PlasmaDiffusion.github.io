@@ -100,15 +100,15 @@ export function makeProjects() {
       false,
       "https://genealogy-site.herokuapp.com/",
       "https://github.com/PlasmaDiffusion/Genealogy-Site",
-      "A genealogy based website made for a client. Admins can submit data on families and individual people through forms. Anyone can view the data entered on specific families.",
+      "A genealogy based website made for a client. Admins can submit data on families and individual people through forms. On the home page you can select family names, then you select a sub family to see information about it and its family members.",
       "This project was made primarily to get acquainted with React. It also makes use of MongoDB with NodeJS. TDD is used too, with Mocha and Testing Library.",
       null,
       "images/GenealogySiteThumbnail.png",
       [
         "images/GenealogySite0.png",
+        "images/GenealogySite2.png",
         "images/GenealogySite1.png",
         "images/GenealogySite3.png",
-        "images/GenealogySite2.png",
       ],
       ["images/ReactLogo.png", "images/NodeJSLogo.png"]
     )

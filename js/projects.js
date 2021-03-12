@@ -122,10 +122,10 @@ export function makeProjects() {
       "https://painton.herokuapp.com/",
       "https://github.com/PlasmaDiffusion/PaintOn",
       "A browser based paint program. Users can try the paint tool out from the main page. They can login to save their drawings and check out other user's drawings as well.",
-      "This project focuses a lot on javascript and the HTML5 canvas. The Django framework is used with an sql database to share drawings as well.",
+      "This project focuses a lot on javascript and the HTML5 canvas. The Django framework is used with an SQL database to share drawings as well.",
       null,
       "images/PaintOnThumbnail.png",
-      ["images/PaintOn0.png"],
+      ["images/PaintOn1.png", "images/PaintOn0.png"],
       ["images/djangoLogo.png", null]
     )
   );

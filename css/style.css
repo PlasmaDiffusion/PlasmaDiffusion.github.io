@@ -59,9 +59,13 @@ a:hover {
   padding: 0; }
 
 #Opening {
-  background-color: black; }
+  background-color: black;
+  margin-bottom: none; }
 
-.display-4 {
+.jumbotron {
+  margin-bottom: -16px; }
+
+.darkBg {
   background-color: black; }
 
 .row {
@@ -149,42 +153,47 @@ h2 {
   display: none; }
 
 .repoLink,
-.siteLink {
+.siteLink,
+input[type="submit"] {
+  color: #007bff;
   background-color: #002736;
   text-decoration: none;
   margin: 5px;
   padding: 5px;
   border-radius: 4px;
+  border: 2px solid #007bff;
   text-align: center; }
 
 .repoLink {
-  padding-right: 18%;
-  text-align: center; }
+  padding-right: 18%; }
 
 .siteLink {
-  padding-right: 20%;
-  text-align: center; }
+  padding-right: 20%; }
 
 .repoLink:hover,
-.siteLink:hover {
-  background-color: #000203;
+.siteLink:hover,
+input[type="submit"]:hover {
+  background-color: #007bff;
+  color: #002736;
   text-decoration: none; }
 
 .close,
 .close:link,
 .close:visited {
   background-color: #004b69;
-  color: white;
+  color: #007bff;
+  border: 2px solid #007bff !important;
   margin: 10px;
   border-radius: 4px;
   padding-left: 10px !important;
   padding-right: 10px !important;
-  padding-bottom: 2px !important; }
+  padding-bottom: 2px !important;
+  text-shadow: none !important; }
 
 .close:hover,
 .close:active {
-  color: white;
-  background-color: #ce8585;
+  color: #002736;
+  background-color: #007bff;
   margin: 10px; }
 
 img {
@@ -200,6 +209,11 @@ img {
   width: 256px;
   height: 256px;
   border-radius: 8px; }
+
+#programmerIcon {
+  border: none;
+  background: none;
+  z-index: 2; }
 
 .framework {
   padding: 32px;
@@ -258,6 +272,12 @@ img {
   margin: auto;
   align-content: space-between; }
 
+.intro {
+  max-width: 100%;
+  margin: none;
+  justify-content: center;
+  overflow: hidden; }
+
 #webIcons,
 #gameIcons {
   max-width: 100%; }
@@ -309,8 +329,8 @@ img {
   filter: grayscale(100%); }
 
 #contactMe > a > svg {
-  width: 5rem;
-  height: 5rem;
+  width: 3.5rem;
+  height: 3.5rem;
   fill: currentcolor; }
 
 form {
@@ -326,18 +346,19 @@ label {
 .smallInput {
   width: 30rem; }
 
+.smallInput,
+.largeInput {
+  background: black;
+  color: white;
+  border: solid 2px black;
+  border-radius: 8px; }
+
 .bigInput {
   white-space: pre-wrap; }
 
 input[type="submit"] {
-  background-color: #526eb8;
-  font-size: 2rem;
-  border: none;
-  border-radius: 8px;
-  box-shadow: inset 0 0 10px #000000; }
-
-input[type="submit"]:hover {
-  background-color: #004b69; }
+  font-size: 1.5rem;
+  border-radius: 16px; }
 
 /* Scrollbar ----------------------------------------------------------------------------------*/
 /* width */
@@ -414,8 +435,13 @@ input[type="submit"]:hover {
 
   .smallInput,
   .largeInput {
-    width: 90%;
+    width: 90%; }
+
+  .smallInput {
     font-size: 1.5rem; }
+
+  .largeInput {
+    font-size: 1rem; }
 
   .row {
     width: 200%; }
@@ -477,24 +503,5 @@ input[type="submit"]:hover {
     transform: scale(1); } }
 .grow {
   animation: grow 1.5s 1; }
-
-/*Unused rotating box
-.rotatingBox {
-  width: 20rem;
-  height: 20rem;
-  background-color: rgba(7, 21, 36, 0.473);
-  animation: square infinite 30s;
-  position: absolute;
-  left: 40%;
-  top: 0;
-}
-
-@keyframes square {
-  0% {
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}*/
 
 /*# sourceMappingURL=style.css.map */

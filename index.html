@@ -19,10 +19,12 @@
 
 
             <!-- The site titles and opening paragraphs -->
-            <div id="Opening" class="jumbotron">
+            <div id="Opening">
+
+            <div class="jumbotron">
 
                 <h2 style="border-top-left-radius: 0;
-                    border-top-right-radius: 0; padding: 60px;" class="display-4">Scott Cooper
+                    border-top-right-radius: 0; padding: 20px;" class="display-4">Scott Cooper
                     <br>
 
                     <!-- Titles -->
@@ -32,11 +34,21 @@
                 </h2>
 
                 <!--Paragraphs (The first paragraph can change if game projects are in the url)-->
-                <p class="lead" id="intro">Welcome to my portfolio. I'm a Web Developer skilled in the front-end and back-end side of web development.
-                    As I learned to program I became interested in developing and designing websites.</p>
-                
                 <p class="lead">Scroll below to check out my different projects and skillset! (Repositories included!)</p>
 
+                <div class="flex-container intro">
+                    <p class="lead" id="intro">Welcome to my portfolio. I'm a developer skilled in the front-end and back-end side of web development. As I learned to program I became interested in developing and designing websites.
+                        <br>
+                        <br>
+                    Scroll below to check out my different projects and skillset! (Repositories included!)
+                    </p>
+                    <img style="float: right;" id="programmerIcon" src="images/programmer-icon-flat_256.png" alt="Computer Programmer Icon">
+
+                </div>
+
+                </div>
+
+                <div class="wave" style="height: 100px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.99 C150.00,150.00 271.49,-49.99 500.00,49.99 L500.00,0.00 L0.00,0.00 Z" style="stroke: none; fill: #051e27;"></path></svg></div>
 
                 <!-- Web framework icons -->
 
@@ -54,9 +66,7 @@
                         <div><img src="images/unityLogo.png" class="framework grow"></div>
                         <div><img src="images/unrealLogo.png" class="framework grow"></div>
                 </div>
-
             </div>
-
 
 
         <div id="websitesOnly">
@@ -110,7 +120,7 @@
                 <div class ="row" style="width: 100%; margin-left:0; margin-right:0; background: none;">
                         <div class ="col-sm">
                             
-                            <h2 class="display-4"><br>Web Developer Skills </h2>
+                            <h2 class="display-4 darkBg"><br>Web Developer Skills </h2>
                         </div>
                         <div class ="col-lg">
                                 <ul class="list-group">
@@ -169,7 +179,7 @@
                 <div class ="row" style="width: 100%; margin-left:0; margin-right:0; background: none;">
                         <div class ="col-sm">
                             
-                            <h2 class="display-4">Game Programmer Skills </h2>
+                            <h2 class="display-4 darkBg">Game Programmer Skills </h2>
                         </div>
                         <div class ="col-lg">
                                 <ul class="list-group">
@@ -360,7 +370,7 @@
             <div id="contactMe" class="main">
                 <h2 style="border-radius: 0;">Contact Me</h2>
                 
-            <div style="padding-bottom: 4rem;"></div>
+            <div style="padding-bottom: 1rem;"></div>
             <!-- Github main page -->
             <a href="https://github.com/PlasmaDiffusion"> 
                 <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
@@ -398,7 +408,7 @@
                 <input type="text" class="smallInput" type="email" placeholder="example@gmail.com" name="email" required>
                 <br>
                 <label for="message" class="lead">Message:<i>*</i></label><br>
-                <textarea type="text" name="message" id="emailMsg" rows="12" cols="64" class="largeInput" placeholder="Reason for contacting me..." name="body" required></textarea>
+                <textarea type="text" name="message" id="emailMsg" rows="6" cols="64" class="largeInput" placeholder="Reason for contacting me..." name="body" required></textarea>
                 <br> <br>
                 <input
                 type="hidden"

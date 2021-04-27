@@ -300,9 +300,13 @@ img {
   justify-content: center;
   overflow: hidden; }
 
+.intro {
+  justify-content: space-between;
+  max-width: 70%; }
+
 .introParagraph {
-  max-width: 80%;
-  justify-content: center; }
+  max-width: 70%;
+  justify-content: left; }
 
 #webIcons,
 #gameIcons {

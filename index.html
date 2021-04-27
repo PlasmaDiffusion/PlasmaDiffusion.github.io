@@ -17,37 +17,38 @@
 
     <body id="body">
 
+        <img src="images/TitleBG.svg" id="titleBG">
 
             <!-- The site titles and opening paragraphs -->
-            <div id="Opening">
-
-            <div class="jumbotron">
-
-                <h2 style="border-top-left-radius: 0;
-                    border-top-right-radius: 0; padding: 20px;" class="display-4">Scott Cooper
-                    <br>
-
-                    <!-- Titles -->
-                    <p class="subHeading" id="title">Full Stack Developer</p>
+            <div id="Opening" style="background: none;">
 
 
-                </h2>
+                <div class="flex-container intro">
+
+                <h1>Scott<br>Cooper
+                    <!-- Titles -->                   
+                </h1>
+
+                <h1 style="font-size: 3rem;" class="subHeading" id="title">
+                    Web Developer<br>
+                    <img style="float: right;" id="programmerIcon" src="images/programmer-icon-flat_256.png" alt="Computer Programmer Icon">
+                </h1>
+
+
+                </div>
 
                 <!--Paragraphs (The first paragraph can change if game projects are in the url)-->
 
                 <div class="flex-container intro">
-                    <p class="lead" id="intro">Welcome to my portfolio. I'm a developer skilled in the front-end and back-end side of web development. As I learned to program I became interested in developing and designing websites.
+                    <p class="lead introParagraph" id="intro">Welcome to my portfolio. I'm a developer skilled in the front-end and back-end side of web development. As I learned to program I became interested in developing and designing websites.
                         <br>
                         <br>
                     Scroll below to check out my different projects and skillset! (Repositories included!)
                     </p>
-                    <img style="float: right;" id="programmerIcon" src="images/programmer-icon-flat_256.png" alt="Computer Programmer Icon">
 
                 </div>
 
-                </div>
-
-                <div class="wave" style="height: 100px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.99 C150.00,150.00 271.49,-49.99 500.00,49.99 L500.00,0.00 L0.00,0.00 Z" style="stroke: none; fill: #051e27;"></path></svg></div>
+               
 
                 <!-- Web framework icons -->
 
@@ -83,10 +84,11 @@
 
 
                 <h2 style="border-radius: 0px; padding-top:0px">Website Projects</h2>
-                <p style="text-align: center;" class="lead">
-                    The below projects were created in frameworks like Express, React and Django.
-                    <br>All of them have either relational or document databases at the back-end.
-                </p>
+                <div class="lead" style="text-align: center;">
+                    <button class="filter">React</button>
+                    <button class="filter">Django</button>
+                    <button class="filter">NodeJS</button>
+                </div>
 
                 <!-- Website projects -->
                     <div class="flex-container" id="webProjectContainer">

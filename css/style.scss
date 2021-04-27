@@ -1,8 +1,8 @@
 //Main colours
 $headCol: #002736;
-$outlineCol: rgb(0, 75, 105);
+$outlineCol: #004b69;
 $blockColour: #051e27;
-$titleColour: #526eb8;
+$titleColour: rgb(82, 110, 184);
 $bgColour: rgb(0, 0, 0);
 $linkColour: rgb(0, 123, 255);
 
@@ -13,6 +13,7 @@ body,
   position: relative;
   background-color: $bgColour;
   border-color: $blockColour;
+  overflow-x: hidden;
 }
 
 //Most text
@@ -41,7 +42,13 @@ i {
   animation: fade 1s 1;
 }
 
-h1,
+h1 {
+  font-size: 5rem;
+  @extend %title;
+  background: none;
+  text-align: left;
+  margin-left: 120px;
+}
 h2 {
   @extend %title;
   background-color: white;
@@ -85,6 +92,7 @@ a:hover {
 #Opening {
   background-color: black;
   margin-bottom: none;
+  margin-top: 50px;
 }
 
 .jumbotron {
@@ -197,7 +205,8 @@ h2 {
 //Buttons to other sites or closing -----------------------
 .repoLink,
 .siteLink,
-input[type="submit"] {
+input[type="submit"],
+.filter {
   color: $linkColour;
   background-color: $headCol;
   text-decoration: none;
@@ -217,7 +226,8 @@ input[type="submit"] {
 
 .repoLink:hover,
 .siteLink:hover,
-input[type="submit"]:hover {
+input[type="submit"]:hover,
+.filter:hover {
   background-color: $linkColour;
   color: $headCol;
   text-decoration: none;
@@ -264,7 +274,21 @@ img {
   border-radius: 8px;
 }
 
+#titleBg {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: none;
+  z-index: -1;
+  position: absolute;
+  left: 20%;
+  top: -45%;
+  overflow: none;
+}
+
 #programmerIcon {
+  width: 256px;
+  height: 256px;
   border: none;
   background: none;
   z-index: 2;
@@ -348,11 +372,17 @@ img {
   align-content: space-between;
 }
 
-.intro {
+.intro,
+.introParagraph {
   max-width: 100%;
   margin: none;
   justify-content: center;
   overflow: hidden;
+}
+
+.introParagraph {
+  max-width: 80%;
+  justify-content: center;
 }
 
 #webIcons,

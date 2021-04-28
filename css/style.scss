@@ -227,7 +227,8 @@ input[type="submit"],
 .repoLink:hover,
 .siteLink:hover,
 input[type="submit"]:hover,
-.filter:hover {
+.filter:hover,
+.highlighted {
   background-color: $linkColour;
   color: $headCol;
   text-decoration: none;
@@ -253,6 +254,7 @@ input[type="submit"]:hover,
   background-color: $linkColour;
   margin: 10px;
 }
+
 //----------------------------------------------
 
 //Images ---------------------------------------
@@ -499,7 +501,7 @@ input[type="submit"] {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: $blockColour;
+  background: darken($blockColour, 5%);
 }
 
 /* Handle */

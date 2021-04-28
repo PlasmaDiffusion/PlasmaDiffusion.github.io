@@ -11,7 +11,7 @@ import {
 
 import { makeProjects } from "./projects.js";
 
-import { loadProjectData } from "./projectFunctions.js";
+import { loadProjectData, filterProjectButton } from "./projectFunctions.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   //Show stuff based on the URL
@@ -19,6 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   var projects = makeProjects();
   loadProjectData(projects);
+
+  filterProjectButton("images/ReactLogo.png");
+
   //Button click events ---------------------------------------------------------------------------------------------
 
   var lastMenu = "#websites";
@@ -82,8 +85,22 @@ document.addEventListener("DOMContentLoaded", () => {
       button.onclick = () => GetValueOfSelectedButton(button, 1);
     } else if (button.className == "prevPreview") {
       button.onclick = () => GetValueOfSelectedButton(button, -1);
+    } else if (button.className == "filter") {
+      button.onclick = () => {
+        filterProjectButton(button.value);
+        //Unhighlight other filter buttons
+        document.getElementById("ReactFilter").className = "filter";
+        document.getElementById("DjangoFilter").className = "filter";
+        document.getElementById("NodeJSFilter").className = "filter";
+
+        //Highlight the button that was just clicked
+        button.className = "filter highlighted";
+      };
     }
   });
+
+  //Highlight the default filter
+  document.getElementById("ReactFilter").className = "filter highlighted";
 
   //OnMouseOver events ---------------------------------------------------------------------------------------------
 

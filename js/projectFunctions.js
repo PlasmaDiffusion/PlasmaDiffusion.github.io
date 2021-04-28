@@ -166,3 +166,24 @@ function setImages(newProjectWindow, project) {
     video.src = project.videoString;
   }
 }
+
+//Functions for only showing certain projects of a certain framework -----------------------------------------------------------
+export function filterProjectButton(frameworkImageToFilterBy) {
+  var projects = document.getElementsByClassName("projectBox");
+
+  for (const project of projects) {
+    var images = project.children[1].getElementsByTagName("img");
+
+    console.log(images[0].src, frameworkImageToFilterBy);
+    if (
+      (images[0] && images[0].src.includes(frameworkImageToFilterBy)) ||
+      (images[1] && images[1].src.includes(frameworkImageToFilterBy))
+    ) {
+      //Make the project button visible
+      project.style.display = "block";
+    } else {
+      //Hide the project button
+      project.style.display = "none";
+    }
+  }
+}

@@ -18,10 +18,17 @@
 
   h1 {
     font-size: 3rem;
+    text-align: center;
+    margin: auto;
   }
 
   .subHeading {
     font-size: 2rem;
+    text-align: center;
+  }
+
+  #programmerIcon {
+    margin: auto;
   }
 
   #websites,
@@ -53,6 +60,12 @@
     flex-direction: row;
   }
 
+  #webProjectContainer,
+  #gameProjectContainer {
+    max-width: none;
+    margin-top: 10%;
+  }
+
   .divider .btn {
     font-size: 1.5rem;
     height: 100%;
@@ -80,8 +93,12 @@
   //Link buttons
   .siteLink,
   .repoLink {
-    text-align: center;
-    font-size: 2rem;
+    font-size: 1rem;
+  }
+
+  .siteLink {
+    padding-right: 2.2rem;
+    padding-left: 2.2rem;
   }
 
   //Contact section
@@ -100,7 +117,7 @@
   }
 
   .smallInput {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   .largeInput {
@@ -114,6 +131,10 @@
 
   .project {
     margin-left: 7.5%;
+  }
+
+  .projectBox {
+    height: 128px;
   }
 
   //Bottom framework images
@@ -143,8 +164,25 @@
     left: 64px;
   }
 
+  //Specific intro section stuff
+  #webIcons div {
+    width: 20%;
+    height: 20%;
+  }
+
   #webIcons {
-    width: 100%;
+    max-width: none;
+  }
+
+  .introParagraph,
+  .intro {
+    max-width: 100%;
+    display: block;
+  }
+
+  //Bootstrap column override
+  .col-ico {
+    width: 40%;
   }
 }
 
@@ -172,5 +210,9 @@
     height: 128px;
     bottom: 128px;
     border-radius: 4px;
+  }
+
+  #titleBG {
+    display: none;
   }
 }

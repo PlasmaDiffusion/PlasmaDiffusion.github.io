@@ -35,7 +35,7 @@ h2 {
   background-color: white; }
 
 .subHeading {
-  font-size: 2rem;
+  font-size: 3rem;
   color: #007bff; }
 
 a {
@@ -258,6 +258,31 @@ img {
 .rightIcon {
   left: 128px; }
 
+.ico0 {
+  position: absolute;
+  left: 90%;
+  top: 50; }
+
+.ico1 {
+  position: absolute;
+  left: 90%;
+  top: 150; }
+
+.ico2 {
+  position: absolute;
+  left: 90%;
+  top: 250; }
+
+.ico3 {
+  position: absolute;
+  left: 90%;
+  top: 350; }
+
+.ico4 {
+  position: absolute;
+  left: 90%;
+  top: 450; }
+
 #contactMe {
   text-align: center; }
 
@@ -408,8 +433,26 @@ input[type="submit"] {
 ::-webkit-scrollbar-thumb:hover {
   background: #526eb8; }
 
+.mobileOnly {
+  display: none; }
+
+.desktopOnly {
+  display: block; }
+
 /* Phone screens ----------------------------------------------------------------------------- */
 @media screen and (max-width: 480px) {
+  .mobileOnly {
+    display: block; }
+
+  .desktopOnly {
+    display: none; }
+
+  h1 {
+    font-size: 3rem; }
+
+  .subHeading {
+    font-size: 2rem; }
+
   #websites,
   #games,
   #Opening,
@@ -498,7 +541,10 @@ input[type="submit"] {
     left: 32px; }
 
   .rightIcon {
-    left: 64px; } }
+    left: 64px; }
+
+  #webIcons {
+    width: 100%; } }
 @media (max-width: 382px) {
   .bigSpace-MobileOnly {
     height: 150px; } }

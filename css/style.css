@@ -65,7 +65,7 @@ a:hover {
 
 #Opening {
   background-color: black;
-  margin-bottom: none;
+  margin-bottom: 200px;
   margin-top: 50px; }
 
 .jumbotron {
@@ -468,6 +468,9 @@ input[type="submit"] {
   .jumbotron {
     width: 100%;
     font-size: 2rem; }
+
+  #Opening {
+    margin-bottom: none; }
 
   h2 {
     font-size: 2rem; }

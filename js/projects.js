@@ -130,6 +130,23 @@ export function makeProjects() {
     )
   );
 
+  projects.push(
+    new Project(
+      5,
+      "Movie Rater",
+      false,
+      "https://movie-rater-3.herokuapp.com/",
+      "https://github.com/PlasmaDiffusion/Movie-Rater",
+      "A work in progress site for you to review movies. It used an API to get actual movies and descriptions, but the site has its own backend for people to post and read reviews.",
+      "The project was made with React in the frontend with a bit of Redux. The backend server is written in PHP using the Laravel framework.",
+
+      null,
+      "images/MovieRaterThumbnail.png",
+      ["images/MovieRater0.png"],
+      ["images/ReactLogo.png", "images/phpLogo.png"]
+    )
+  );
+
   //Games ---------------------------------------------------------------------------------------------------------------------------
   projects.push(
     new Project(

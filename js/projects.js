@@ -138,7 +138,7 @@ export function makeProjects() {
       "https://movie-rater-3.herokuapp.com/",
       "https://github.com/PlasmaDiffusion/Movie-Rater",
       "A work in progress site for you to review movies. It used an API to get actual movies and descriptions, but the site has its own backend for people to post and read reviews.",
-      "The project was made with React in the frontend with a bit of Redux. The backend server is written in PHP using the Laravel framework.",
+      "The project was made with React in the frontend, and this one uses hooks exclusively. I'm in the proccess of converting the front end to TypeScript as well. The backend server is written in PHP using the Laravel framework.",
 
       null,
       "images/MovieRaterThumbnail.png",

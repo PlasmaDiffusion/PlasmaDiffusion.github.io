@@ -92,6 +92,8 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("ReactFilter").className = "filter";
         document.getElementById("DjangoFilter").className = "filter";
         document.getElementById("NodeJSFilter").className = "filter";
+        document.getElementById("GraphQLFilter").className = "filter";
+
 
         //Highlight the button that was just clicked
         button.className = "filter highlighted";

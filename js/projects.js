@@ -135,15 +135,15 @@ export function makeProjects() {
       5,
       "Movie Rater",
       false,
-      "https://movie-rater-3.herokuapp.com/",
+      "https://movie-rater2.netlify.app/",
       "https://github.com/PlasmaDiffusion/Movie-Rater",
-      "A work in progress site for you to review movies. It used an API to get actual movies and descriptions, but the site has its own backend for people to post and read reviews.",
-      "The project was made with React in the frontend, and this one uses hooks exclusively. I'm in the proccess of converting the front end to TypeScript as well. The backend server is written in PHP using the Laravel framework.",
+      "A work in progress site for you to review movies. It used an external API to get actual movies and descriptions, but the site also uses graphQL for its own movie reviews data.",
+      "The project was made with React in the frontend (in Typescript), and NodeJS in the backend. Both ends use GraphQL (the front end uses Apollo).",
 
       null,
       "images/MovieRaterThumbnail.png",
       ["images/MovieRater0.png"],
-      ["images/ReactLogo.png", "images/phpLogo.png"]
+      ["images/ReactLogo.png", "images/NodeJSLogo.png"]
     )
   );
 

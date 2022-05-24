@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
   var projects = makeProjects();
   loadProjectData(projects);
 
-  filterProjectButton("images/ReactLogo.png");
+  filterProjectButton("images/GraphQL_Logo.png");
 
   //Button click events ---------------------------------------------------------------------------------------------
 
@@ -89,10 +89,10 @@ document.addEventListener("DOMContentLoaded", () => {
       button.onclick = () => {
         filterProjectButton(button.value);
         //Unhighlight other filter buttons
+        document.getElementById("GraphQLFilter").className = "filter";
         document.getElementById("ReactFilter").className = "filter";
         document.getElementById("DjangoFilter").className = "filter";
         document.getElementById("NodeJSFilter").className = "filter";
-        document.getElementById("GraphQLFilter").className = "filter";
 
 
         //Highlight the button that was just clicked
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   //Highlight the default filter
-  document.getElementById("ReactFilter").className = "filter highlighted";
+  document.getElementById("GraphQLFilter").className = "filter highlighted";
 
   //OnMouseOver events ---------------------------------------------------------------------------------------------
 

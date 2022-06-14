@@ -152,14 +152,14 @@ export function makeProjects() {
     new Project(
       6,
       "Robots & Things",
-      true,
+      false,
       "https://robotsandthingsgame.com/",
-      "",
+      "https://robotsandthingsgame.com/",
       "A 3D platformer game that mixes open exploration and linear levels together.",
       "I'm the programmer for this project, using the Unreal engine. I also have done a large chunk of the level design and overall game design.",
-      "https://www.youtube.com/embed/VY4uQ4FOgcs",
+      "https://www.youtube.com/embed/pucektir9Qo",
       null,
-      ["images/RobotsAndThings0.png", "images/RobotsAndThings1.png"],
+      ["images/RobotsAndThingsLogo.png", "images/RobotsAndThings0.png", "images/RobotsAndThings1.png"],
       ["images/unrealLogo.png", null]
     )
   );

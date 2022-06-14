@@ -93,6 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("ReactFilter").className = "filter";
         document.getElementById("DjangoFilter").className = "filter";
         document.getElementById("NodeJSFilter").className = "filter";
+        document.getElementById("unrealFilter").className = "filter";
 
 
         //Highlight the button that was just clicked

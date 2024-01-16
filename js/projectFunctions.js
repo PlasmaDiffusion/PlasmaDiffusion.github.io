@@ -39,9 +39,8 @@ function generateProjectButton(project, parentId) {
   //Clone template and get parent node
   var template = document.getElementById("projectButtonTemplate");
   var parent = document.getElementById(parentId);
-  var newProjectImageButton = template.content.firstElementChild.cloneNode(
-    true
-  );
+  var newProjectImageButton =
+    template.content.firstElementChild.cloneNode(true);
 
   //Assign image (Either the thumbnail or the first preview image)
 
@@ -105,9 +104,17 @@ function setLinks(newProjectWindow, project) {
   var links = newProjectWindow.getElementsByTagName("a");
   links[0].href = project.url;
 
-  //Hide repository link if not there
-  if (project.repoLink) links[1].href = project.repoLink;
-  else links[1].display = "none";
+  //Hide site/repository link if not there
+  if (project.url) {
+    links[0].href = project.url;
+  } else {
+    links[0].display = "none";
+  }
+  if (project.repoLink) {
+    links[1].href = project.repoLink;
+  } else {
+    links[1].display = "none";
+  }
 }
 
 function setDescriptions(newProjectWindow, project) {

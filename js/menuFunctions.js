@@ -68,7 +68,7 @@ export function ChangePreviewImage(button) {
 
   //Check for video
   let videoSrc = imageNodes.childNodes[1].innerHTML;
-  console.log(videoSrc);
+  //console.log(videoSrc);
 
   let offset = 1;
   if (videoSrc) offset = 0;

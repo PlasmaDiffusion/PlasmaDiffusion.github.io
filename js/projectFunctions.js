@@ -102,18 +102,17 @@ function setHeading(newProjectWindow, project) {
 function setLinks(newProjectWindow, project) {
   //Set the url link
   var links = newProjectWindow.getElementsByTagName("a");
-  links[0].href = project.url;
 
   //Hide site/repository link if not there
   if (project.url) {
     links[0].href = project.url;
   } else {
-    links[0].display = "none";
+    links[0].style = "display:none;";
   }
   if (project.repoLink) {
     links[1].href = project.repoLink;
   } else {
-    links[1].display = "none";
+    links[1].style = "display:none;";
   }
 }
 
@@ -181,7 +180,7 @@ export function filterProjectButton(frameworkImageToFilterBy) {
   for (const project of projects) {
     var images = project.children[1].getElementsByTagName("img");
 
-    console.log(images[0].src, frameworkImageToFilterBy);
+    //console.log(images[0].src, frameworkImageToFilterBy);
     if (
       (images[0] && images[0].src.includes(frameworkImageToFilterBy)) ||
       (images[1] && images[1].src.includes(frameworkImageToFilterBy))

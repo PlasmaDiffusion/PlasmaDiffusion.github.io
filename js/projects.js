@@ -135,7 +135,7 @@ export function makeProjects() {
       5,
       "Movie Rater",
       false,
-      "https://movie-rater-ts.netlify.app/",
+      null,//"https://movie-rater-ts.netlify.app/",
       "https://github.com/PlasmaDiffusion/Movie-Rater",
       "A site for you to review movies. It used an external API to get actual movies and descriptions, but the site also uses GraphQL for its own movie reviews data.",
       "The project was made with React in the frontend (in Typescript), and NodeJS in the backend. Both ends use GraphQL (the front end uses Apollo).",

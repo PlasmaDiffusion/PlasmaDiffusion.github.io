@@ -147,10 +147,27 @@ export function makeProjects() {
     )
   );
 
-  //Games ---------------------------------------------------------------------------------------------------------------------------
   projects.push(
     new Project(
       6,
+      "Stretch List",
+      false,
+      null,
+      "https://github.com/PlasmaDiffusion/StretchesV2",
+      "A React Native app that serves as a list and timer for stretch routines.",
+      "You can edit this list, change the timer per stretch, and link references to stretches.",
+
+      null,
+      "images/stretchAppThumbnail.png",
+      ["images/StretchApp0.jpg","images/StretchApp1.jpg","images/StretchApp2.jpg"],
+      ["images/ReactLogo.png"]//["images/ReactNativeLogo.png"]
+    )
+  );
+
+  //Games ---------------------------------------------------------------------------------------------------------------------------
+  projects.push(
+    new Project(
+      7,
       "Robots & Things",
       false,
       "https://robotsandthingsgame.com/",
@@ -166,7 +183,7 @@ export function makeProjects() {
 
   projects.push(
     new Project(
-      7,
+      8,
       "Hyper Snake",
       true,
       null,//"https://play.google.com/store/apps/details?id=com.PlasmaShadowGames.HypeSnake&hl=en_CA&gl=US",

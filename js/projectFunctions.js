@@ -103,16 +103,27 @@ function setLinks(newProjectWindow, project) {
   //Set the url link
   var links = newProjectWindow.getElementsByTagName("a");
 
+  //Put link buttons in description if image is too wide
+  if (project.name === "Stretch List")
+  {
+  setInnerDescriptionLinks(links, project);
+  return;
+  }
+
+  //Otherwise keep them below and aligned with the framework icons
+  links[0].style = "display:none;";
+  links[1].style = "display:none;";
+
   //Hide site/repository link if not there
   if (project.url) {
-    links[0].href = project.url;
+    links[2].href = project.url;
   } else {
-    links[0].style = "display:none;";
+    links[2].style = "display:none;";
   }
   if (project.repoLink) {
-    links[1].href = project.repoLink;
+    links[3].href = project.repoLink;
   } else {
-    links[1].style = "display:none;";
+    links[3].style = "display:none;";
   }
 }
 
@@ -211,4 +222,22 @@ function checkIfProjectIsFeatured(featuredFilter, projectHTML) {
   }
 
   return false;
+}
+
+
+
+function setInnerDescriptionLinks(links, project) {
+  if (project.url) {
+    links[0].href = project.url;
+  } else {
+    links[0].style = "display:none;";
+  }
+  if (project.repoLink) {
+    links[1].href = project.repoLink;
+  } else {
+    links[1].style = "display:none;";
+  }
+
+  links[2].style = "display:none;";
+  links[3].style = "display:none;";
 }

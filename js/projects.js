@@ -185,7 +185,7 @@ export function makeProjects() {
     new Project(
       8,
       "Hyper Snake",
-      true,
+      false,
       null,//"https://play.google.com/store/apps/details?id=com.PlasmaShadowGames.HypeSnake&hl=en_CA&gl=US",
       "https://github.com/PlasmaDiffusion/Snake-Adventure",
       "A different take on the classic snake game. Hyper Snake has you take the snake across various levels that require you to grow a certain size to reach the next one. You can unlock different level themes that alter the gameplay, as well as skins for the snake.",

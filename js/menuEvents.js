@@ -96,6 +96,8 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("DjangoFilter").className = "filter";
         document.getElementById("NodeJSFilter").className = "filter";
         document.getElementById("UnrealFilter").className = "filter";
+        document.getElementById("UnityFilter").className = "filter";
+
 
 
         //Highlight the button that was just clicked

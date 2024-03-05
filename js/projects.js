@@ -160,7 +160,7 @@ export function makeProjects() {
       null,
       "images/stretchAppThumbnail.png",
       ["images/StretchApp0.jpg","images/StretchApp1.jpg","images/StretchApp2.jpg"],
-      ["images/ReactLogo.png"]//["images/ReactNativeLogo.png"]
+      ["images/ReactNativeLogo.png"]
     )
   );
 

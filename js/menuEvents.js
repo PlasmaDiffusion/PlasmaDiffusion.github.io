@@ -92,6 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("FeaturedFilter").className = "filter";
         document.getElementById("GraphQLFilter").className = "filter";
         document.getElementById("ReactFilter").className = "filter";
+        document.getElementById("ReactNativeFilter").className = "filter";
         document.getElementById("DjangoFilter").className = "filter";
         document.getElementById("NodeJSFilter").className = "filter";
         document.getElementById("UnrealFilter").className = "filter";

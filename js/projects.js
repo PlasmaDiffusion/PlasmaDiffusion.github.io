@@ -164,10 +164,28 @@ export function makeProjects() {
     )
   );
 
-  //Games ---------------------------------------------------------------------------------------------------------------------------
   projects.push(
     new Project(
       7,
+      "Battle Clicker",
+      false,
+      "https://battle-clicker.netlify.app/",
+      "https://github.com/PlasmaDiffusion/battle-clicker",
+      "A clicker idle game made in Angular using 8 bit rpgs as a baseline. Similar to other idle games you click a chest to generate gold and buy stuff that generates gold faster. The extra twist is you hire fighters to battle monsters for you, who have their own advantages against certain foes in battle. The game will ask to use your browser's cookies in order to save and load data.",
+      "The purpose of the project was to get familiar with Angular and its components, mainly to get a feel of how the framework differs from React. A lot of the game is based around asynchronous setInterval events alongside click events.",
+      null,
+      "images/BattleClickerThumbnail.png",
+      [
+        "images/BattleClicker0.png",
+      ],
+      ["images/AngularLogo.png", null]
+    )
+  );
+
+  //Games ---------------------------------------------------------------------------------------------------------------------------
+  projects.push(
+    new Project(
+      8,
       "Robots & Things",
       false,
       "https://www.youtube.com/watch?v=pucektir9Qo&ab_channel=Robots%26Things",//"https://robotsandthingsgame.com/",
@@ -183,7 +201,7 @@ export function makeProjects() {
 
   projects.push(
     new Project(
-      8,
+      9,
       "Hyper Snake",
       false,
       null,//"https://play.google.com/store/apps/details?id=com.PlasmaShadowGames.HypeSnake&hl=en_CA&gl=US",

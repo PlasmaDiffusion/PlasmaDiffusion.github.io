@@ -205,7 +205,7 @@ function checkIfProjectIsFeatured(featuredFilter, projectHTML) {
   if (featuredFilter === "Featured") {
     console.log("*", projectHTML);
     if (projectHTML.includes("Movie Rater")) return true;
-    if (projectHTML.includes("Stretch List")) return true;
+    if (projectHTML.includes("Battle Clicker")) return true;
     if (projectHTML.includes("Robots &amp; Things")) return true;
     return false;
   }

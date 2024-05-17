@@ -188,7 +188,7 @@ export function makeProjects() {
       8,
       "Robots & Things",
       false,
-      "https://www.youtube.com/watch?v=pucektir9Qo&ab_channel=Robots%26Things",//"https://robotsandthingsgame.com/",
+      "https://plasmashadowstudios.github.io/Robots-And-Things",
       null,
       "A 3D platformer game that mixes open exploration and linear levels together.",
       "I'm the programmer for this project, using the Unreal engine. I also have done a large chunk of the level design and overall game design.",

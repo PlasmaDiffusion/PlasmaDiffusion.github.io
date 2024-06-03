@@ -98,7 +98,7 @@ export function makeProjects() {
       3,
       "My Family Tree",
       false,
-      null, //"https://genealogy-site.netlify.app/",
+      "https://genealogy-site.netlify.app/",
       "https://github.com/PlasmaDiffusion/Genealogy-Site",
       "A genealogy based website made for a client. Admins can submit data on families and individual people through forms. On the home page you can select family names, then you select a sub family to see information about it and its family members.",
       "This project was made primarily to get acquainted with React. It also makes use of MongoDB with NodeJS. TDD is used too, with Mocha and Testing Library.",

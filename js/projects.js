@@ -182,10 +182,30 @@ export function makeProjects() {
     )
   );
 
-  //Games ---------------------------------------------------------------------------------------------------------------------------
   projects.push(
     new Project(
       8,
+      "Streamlined Job Searcher",
+      false,
+      "https://main.d2eaxfihz5qfr0.amplifyapp.com/",
+      "https://github.com/PlasmaDiffusion/streamlined-dev-job-search",
+      "A site to track job applications and links. It displays a table of jobs you've applied for, auto fills data from job descriptions, allows you to save links and order them by click frequency, and also shows a graph for analytics of posted applications.",
+      "This was made in Vue at the front end with D3.js to show the graph. At the back end it uses .NET and DynamoDB. (Usernames and dates are used as the primary and sort keys for job applications.) For the sake of demoing it, you can use this app as a guest to use the data publicly.",
+      null,
+      "images/StreamlinedJobSearcherThumbnail.png",
+      [
+        "images/StreamlinedJobSearch0.png",
+        "images/StreamlinedJobSearch1.png",
+        "images/StreamlinedJobSearch2.png",
+      ],
+      ["images/VueLogo.png", "images/NetLogo.png"]
+    )
+  );
+
+  //Games ---------------------------------------------------------------------------------------------------------------------------
+  projects.push(
+    new Project(
+      9,
       "Robots & Things",
       false,
       "https://plasmashadowstudios.github.io/Robots-And-Things",
@@ -201,7 +221,7 @@ export function makeProjects() {
 
   projects.push(
     new Project(
-      9,
+      10,
       "Hyper Snake",
       false,
       null,//"https://play.google.com/store/apps/details?id=com.PlasmaShadowGames.HypeSnake&hl=en_CA&gl=US",

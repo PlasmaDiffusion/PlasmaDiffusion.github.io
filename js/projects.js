@@ -190,7 +190,7 @@ export function makeProjects() {
       "https://main.d2eaxfihz5qfr0.amplifyapp.com/",
       "https://github.com/PlasmaDiffusion/streamlined-dev-job-search",
       "A site to track job applications and links. It displays a table of jobs you've applied for, auto fills data from job descriptions, allows you to save links and order them by click frequency, and also shows a graph for analytics of posted applications.",
-      "This was made in Vue at the front end with D3.js to show the graph. At the back end it uses .NET and DynamoDB. (Usernames and dates are used as the primary and sort keys for job applications.) For the sake of demoing it, you can use this app as a guest to use the data publicly.",
+      "This was made in Vue at the front end with D3.js to show graphs. At the back end it uses .NET and DynamoDB. (Usernames and dates are used as the primary and sort keys for job applications.) For the sake of demoing it, you can use this app as a guest to use the data publicly.",
       null,
       "images/StreamlinedJobSearcherThumbnail.png",
       [

@@ -277,7 +277,7 @@ img {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-  max-width: 60%;
+  max-width: 80%;
   margin: auto;
   align-content: space-between; }
 

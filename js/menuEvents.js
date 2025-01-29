@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //Find all buttons
   document.querySelectorAll("button").forEach((button) => {
-    //Click a button to show information of a project.
+    //PROJECT BUTTON ON CLICK: Click a button to show information of a project.
     if (button.className == "btn" || button.className == "bigBtn") {
       button.onclick = () => {
         ChangeElementDisplay(button.value, "block");
@@ -52,9 +52,16 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = "#top";
       };
 
-      //Make the text smaller if the words are too big
-      //let buttonName = button.innerHTML.split(" ");
-      //if (buttonName[0].length > 8) button.style.fontSize = 12;
+      //PROJECT BUTTON ON HOVERED: Add a brief description when button is hovered over
+      const briefDescription = document.getElementById("briefDescription");
+
+      button.onmouseover = () => {
+        briefDescription.style.visibility = "visible";
+        briefDescription.innerHTML = button.getAttribute("data-brief-description");
+      };
+      button.onmouseleave = () => {
+        briefDescription.style.visibility = "hidden";
+      }
     }
 
     //Click close button to get rid of information

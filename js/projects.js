@@ -137,7 +137,7 @@ export function makeProjects() {
       false,
       "https://movie-rater-ts.netlify.app/",
       "https://github.com/PlasmaDiffusion/Movie-Rater",
-      "A site for you to review movies. It used an external API to get actual movies and descriptions, but the site also uses GraphQL for its own movie reviews data.",
+      "A site for you to review and rate movies. It used an external API to get actual movies and descriptions, but the site also uses GraphQL for its own movie reviews data.",
       "The project was made with React in the frontend (in Typescript), and NodeJS in the backend. Both ends use GraphQL (the front end uses Apollo).",
 
       null,
@@ -189,7 +189,7 @@ export function makeProjects() {
       false,
       "https://main.d2eaxfihz5qfr0.amplifyapp.com/",
       "https://github.com/PlasmaDiffusion/streamlined-dev-job-search",
-      "A site to track job applications and links. It displays a table of jobs you've applied for, auto fills data from job descriptions, allows you to save links and order them by click frequency, and also shows a graph for analytics of posted applications.",
+      "A site to track job applications and links for job searching. It displays a table of jobs you've applied for, auto fills data from job descriptions, allows you to save links and order them by click frequency, and also shows a graph for analytics of posted applications.",
       "This was made in Vue at the front end with D3.js to show graphs. At the back end it uses .NET and DynamoDB. (Usernames and dates are used as the primary and sort keys for job applications.) For the sake of demoing it, you can use this app as a guest to use the data publicly.",
       null,
       "images/StreamlinedJobSearcherThumbnail.png",

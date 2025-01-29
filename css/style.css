@@ -263,6 +263,12 @@ img {
   width: 200%;
   height: auto; }
 
+#briefDescription {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
 /*html {
   scroll-behavior: smooth; //Unused janky smooth scrollbar
 }*/

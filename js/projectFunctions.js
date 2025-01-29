@@ -61,6 +61,8 @@ function generateProjectButton(project, parentId) {
   //Framework icon to attach to button
   newProjectImageButton.children[1].appendChild(frameworkIcon0);
 
+  newProjectImageButton.children[1].setAttribute('data-brief-description', project.description0.split('.')[0] + ".");
+
   //The second framework icon is optional
   if (project.frameworkStrings[1])
     newProjectImageButton.children[1].appendChild(frameworkIcon1);

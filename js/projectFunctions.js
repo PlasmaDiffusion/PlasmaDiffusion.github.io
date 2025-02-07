@@ -108,11 +108,13 @@ function setLinks(newProjectWindow, project) {
   //Hide site/repository link if not there
   if (project.url) {
     links[0].href = project.url;
+    links[0].setAttribute('data-umami-event-url', project.url);
   } else {
     links[0].style = "display:none;";
   }
   if (project.repoLink) {
     links[1].href = project.repoLink;
+    links[1].setAttribute('data-umami-event-url', project.url);
   } else {
     links[1].style = "display:none;";
   }

@@ -26,7 +26,7 @@ export class Project {
   }
 }
 
-export function makeProjects() {
+export function getProjectData() {
   var projects = new Array();
 
   //Websites ------------------------------------------------------------------------------------------------------------------------

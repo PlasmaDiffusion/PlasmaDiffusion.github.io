@@ -9,16 +9,16 @@ import {
   HideProjectsBasedOnURL,
 } from "./menuFunctions.js";
 
-import { makeProjects } from "./projects.js";
+import { getProjectData } from "./projects.js";
 
-import { loadProjectData, filterProjectButton } from "./projectFunctions.js";
+import { useProjectDataToGenerateHTML, filterProjectButton } from "./projectFunctions.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   //Show stuff based on the URL
   HideProjectsBasedOnURL();
 
-  var projects = makeProjects();
-  loadProjectData(projects);
+  var projects = getProjectData();
+  useProjectDataToGenerateHTML(projects);
 
   filterProjectButton("Featured");
 
@@ -62,6 +62,9 @@ document.addEventListener("DOMContentLoaded", () => {
       button.onmouseleave = () => {
         briefDescription.style.visibility = "hidden";
       }
+
+      //Analytics for when project is clicked
+      button.setAttribute('data-umami-event-project-displayed', projects[button.value].name);
     }
 
     //Click close button to get rid of information

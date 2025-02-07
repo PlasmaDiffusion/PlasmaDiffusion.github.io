@@ -8,7 +8,7 @@ function getEnabledProjectType() {
 }
 
 //Create a menu of projects to click on. Also create <div>s of "windows" for each project.
-export function loadProjectData(projects) {
+export function useProjectDataToGenerateHTML(projects) {
   var projType = getEnabledProjectType();
 
   projects.forEach((project) => {

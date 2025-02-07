@@ -205,7 +205,6 @@ function checkIfFrameworkIsUsed(images, frameworkImageToFilterBy) {
 //Hardcoded set of featured projects
 function checkIfProjectIsFeatured(featuredFilter, projectHTML) {
   if (featuredFilter === "Featured") {
-    console.log("*", projectHTML);
     if (projectHTML.includes("Movie Rater")) return true;
     if (projectHTML.includes("Streamlined Job Searcher")) return true;
     if (projectHTML.includes("Robots &amp; Things")) return true;

@@ -150,12 +150,12 @@ export function getProjectData() {
   projects.push(
     new Project(
       6,
-      "Stretch List",
+      "Stretch Timer & Logger App",
       false,
       null,
       "https://github.com/PlasmaDiffusion/StretchesV2",
       "A React Native app that serves as a list and timer for stretch routines. You can edit this list, change the timer per stretch, and link references to stretches.",
-      "(Currently this only is for iOS and Android. The screenshots are more vertical to showcase what it would look like on a phone.)",
+      "(Currently this is for iOS and Android. The screenshots are more vertical to showcase what it would look like on a phone.)",
 
       null,
       "images/stretchAppThumbnail.png",

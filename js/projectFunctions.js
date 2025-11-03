@@ -208,7 +208,7 @@ function checkIfFrameworkIsUsed(images, frameworkImageToFilterBy) {
 function checkIfProjectIsFeatured(featuredFilter, projectHTML) {
   if (featuredFilter === "Featured") {
     if (projectHTML.includes("Movie Rater")) return true;
-    if (projectHTML.includes("Streamlined Job Searcher")) return true;
+    if (projectHTML.includes("Stretch Timer &amp; Logger App")) return true;
     if (projectHTML.includes("Robots &amp; Things")) return true;
     return false;
   }

@@ -150,12 +150,12 @@ export function getProjectData() {
   projects.push(
     new Project(
       6,
-      "Stretch Timer & Logger App",
+      "Stretch Timer & Advice App",
       false,
       null,
       "https://github.com/PlasmaDiffusion/StretchesV2",
-      "A React Native app that serves as a list and timer for stretch routines. You can edit this list, change the timer per stretch, and link references to stretches.",
-      "(Currently this is for iOS and Android. The screenshots are more vertical to showcase what it would look like on a phone.)",
+      "A React Native app that serves as a list and timer for stretch routines, plus physiotherapy advice via OpenAI which uses RAG to fetch relevant articles. You can edit this list, change the timer per stretch, and link references to stretches.",  
+      "Additionally there's a Flask backend that uses OpenAI to ask for physiotherapy advice, and uses RAG to pull information from articles from PubMed Central.",
 
       null,
       "images/stretchAppThumbnail.png",

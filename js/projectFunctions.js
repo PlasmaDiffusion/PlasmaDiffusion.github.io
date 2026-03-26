@@ -62,6 +62,7 @@ function generateProjectButton(project, parentId) {
   newProjectImageButton.children[1].appendChild(frameworkIcon0);
 
   newProjectImageButton.children[1].setAttribute('data-brief-description', project.description0.split('.')[0] + ".");
+  newProjectImageButton.querySelector('.projectLabel').innerHTML = project.name;
 
   //The second framework icon is optional
   if (project.frameworkStrings[1])

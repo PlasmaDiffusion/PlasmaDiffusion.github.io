@@ -95,6 +95,13 @@ document.addEventListener("DOMContentLoaded", () => {
       button.onclick = () => GetValueOfSelectedButton(button, 1);
     } else if (button.className == "prevPreview") {
       button.onclick = () => GetValueOfSelectedButton(button, -1);
+    } else if (button.id === "OtherProjectsToggle") { // Hide non featured projects, but reveal them with this button
+      button.onclick = () => {
+        const archivedFilters = document.getElementById("archivedFilters");
+        const isOpen = archivedFilters.style.display !== "none";
+        archivedFilters.style.display = isOpen ? "none" : "block";
+        button.innerHTML = isOpen ? "Other Projects ▼" : "Other Projects ▲";
+      };
     } else if (button.className == "filter") {
       button.onclick = () => {
         filterProjectButton(button.value);
@@ -110,8 +117,6 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("NetFilter").className = "filter";
         document.getElementById("UnrealFilter").className = "filter";
         document.getElementById("UnityFilter").className = "filter";
-
-
 
         //Highlight the button that was just clicked
         button.className = "filter highlighted";

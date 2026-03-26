@@ -154,7 +154,7 @@ export function getProjectData() {
       false,
       null,
       "https://github.com/PlasmaDiffusion/StretchesV2",
-      "A React Native app that serves as a list and timer for stretch routines, plus physiotherapy advice via OpenAI which uses RAG to fetch info from relevant articles. You can edit this list, change the timer per stretch, and link references to stretches.",
+      "A React Native app that serves as a list and timer for stretch routines, plus physiotherapy advice via OpenAI which uses RAG to fetch from relevant articles. You can edit this list, change the timer per stretch, and link references to stretches.",
       "Additionally there's a Flask backend for handling the advice. It pulls information from PubMed Central.",
 
       null,

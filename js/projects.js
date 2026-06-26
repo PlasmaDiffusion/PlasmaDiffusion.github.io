@@ -248,7 +248,7 @@ export function getProjectData() {
       11,
       "Toy Car Collectibles",
       false,
-      "https://lasallecollectibles.com",
+      "https://lasallecollectibles.ca",
       null,
       "A website freelanced for a toy car collectibles business where users can browse toy cars for sale or even preview the car in real life with AR.",
       "This uses Next.js and React at the front end, and Neon for a serverless and low cost PostgreSQL database. The AR feature uses React Three Fiber and React Three XR.",

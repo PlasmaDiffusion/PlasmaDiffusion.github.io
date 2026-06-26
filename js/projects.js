@@ -162,7 +162,7 @@ export function getProjectData() {
 
       null,
       "images/stretchAppThumbnail.png",
-      ["images/StretchApp/StretchApp2.png","images/StretchApp/StretchApp0.png","images/StretchApp/StretchApp3.png","images/StretchApp/StretchApp4.png"],
+      ["images/StretchApp/stretchApp2.png","images/StretchApp/StretchApp0.png","images/StretchApp/StretchApp3.png","images/StretchApp/StretchApp4.png"],
       ["images/ReactNativeLogo.png"],
       true
     )

@@ -29,7 +29,7 @@ export class Project {
 export function getProjectData() {
   var projects = new Array();
 
-  //Websites ------------------------------------------------------------------------------------------------------------------------
+  //Add websites, apps, or games here ----------------------------------------------------------------------------------------------------------------
   projects.push(
     new Project(
       0,
@@ -202,7 +202,6 @@ export function getProjectData() {
     )
   );
 
-  //Games ---------------------------------------------------------------------------------------------------------------------------
   projects.push(
     new Project(
       9,
@@ -236,6 +235,27 @@ export function getProjectData() {
         "images/hyperSnake3.png",
       ],
       ["images/unityLogo.png", null]
+    )
+  );
+
+  projects.push(
+    new Project(
+      11,
+      "Toy Car Collectibles",
+      false,
+      "https://lasallecollectibles.com",
+      null,
+      "A freelance website for a toy car collectibles business where users can browse toy cars for sale or even preview the car in real life with AR.",
+      "This uses Next.js and React at the front end, and Neon for a serverless and low cost PostgreSQL database. The AR feature uses React Three Fiber and React Three XR.",
+      null,
+      "images/ToyCarCollectables/ToyCarCollectablesThumbnail.png",
+      [
+        "images/ToyCarCollectables/ToyCarCollectables0.png",
+        "images/ToyCarCollectables/ToyCarCollectables1.png",
+        "images/ToyCarCollectables/ToyCarCollectables2.png",
+        "images/ToyCarCollectables/ToyCarCollectables3.png",
+      ],
+      ["images/ReactLogo.png", null]
     )
   );
 

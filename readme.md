@@ -4,3 +4,7 @@ Data on projects is entered in projects.js. Other js files are used alongside a 
 
 # Run project
 python -m http.server
+
+(or)
+
+python3 -m http.server

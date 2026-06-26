@@ -208,9 +208,10 @@ function checkIfFrameworkIsUsed(images, frameworkImageToFilterBy) {
 //Hardcoded set of featured projects
 function checkIfProjectIsFeatured(featuredFilter, projectHTML) {
   if (featuredFilter === "Featured") {
-    if (projectHTML.includes("Movie Rater")) return true;
+    // if (projectHTML.includes("Movie Rater")) return true;
     if (projectHTML.includes("Stretch Timer")) return true;
     if (projectHTML.includes("Robots &amp; Things")) return true;
+    if (projectHTML.includes("Toy Car Collectibles")) return true;
     return false;
   }
 

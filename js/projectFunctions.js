@@ -51,6 +51,7 @@ function generateProjectButton(project, parentId) {
   //Assign button value and text
   newProjectImageButton.children[1].value = project.id;
   newProjectImageButton.children[1].innerHTML = project.name;
+  if (project.isFeatured) newProjectImageButton.dataset.featured = "true";
 
   //Show framework icon over the button
   var frameworkIcon0 = newProjectImageButton.children[2];
@@ -186,7 +187,7 @@ export function filterProjectButton(frameworkImageToFilterBy) {
 
     if (
       checkIfFrameworkIsUsed(images, frameworkImageToFilterBy) ||
-      checkIfProjectIsFeatured(frameworkImageToFilterBy, project.children[1].innerHTML)
+      checkIfProjectIsFeatured(frameworkImageToFilterBy, project)
     ) {
       //Make the project button visible
       project.style.display = "block";
@@ -205,15 +206,6 @@ function checkIfFrameworkIsUsed(images, frameworkImageToFilterBy) {
   );
 }
 
-//Hardcoded set of featured projects
-function checkIfProjectIsFeatured(featuredFilter, projectHTML) {
-  if (featuredFilter === "Featured") {
-    // if (projectHTML.includes("Movie Rater")) return true;
-    if (projectHTML.includes("Stretch Timer")) return true;
-    if (projectHTML.includes("Robots &amp; Things")) return true;
-    if (projectHTML.includes("Toy Car Collectibles")) return true;
-    return false;
-  }
-
-  return false;
+function checkIfProjectIsFeatured(featuredFilter, projectElement) {
+  return featuredFilter === "Featured" && projectElement.dataset.featured === "true";
 }

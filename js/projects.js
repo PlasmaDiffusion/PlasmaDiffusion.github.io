@@ -10,7 +10,8 @@ export class Project {
     videoString,
     thumbnailString, //Image you'll see on the menu (defaults to first image string otherwise)
     imageStrings, //Array of image strings
-    frameworkStrings //Array of up to two framework image strings
+    frameworkStrings, //Array of up to two framework image strings
+    isFeatured
   ) {
     this.id = id;
     this.name = name;
@@ -23,6 +24,7 @@ export class Project {
     this.thumbnailString = thumbnailString;
     this.imageStrings = imageStrings;
     this.frameworkStrings = frameworkStrings;
+    this.isFeatured = isFeatured ?? false;
   }
 }
 
@@ -143,7 +145,8 @@ export function getProjectData() {
       null,
       "images/MovieRaterThumbnail.png",
       ["images/MovieRater0.png", "images/MovieRater1.png", "images/MovieRater2.png"],
-      ["images/ReactLogo.png", "images/GraphQL_Logo.png"]
+      ["images/ReactLogo.png", "images/GraphQL_Logo.png"],
+      false
     )
   );
 
@@ -160,7 +163,8 @@ export function getProjectData() {
       null,
       "images/stretchAppThumbnail.png",
       ["images/StretchApp/StretchApp2.png","images/StretchApp/StretchApp0.png","images/StretchApp/StretchApp3.png","images/StretchApp/StretchApp4.png"],
-      ["images/ReactNativeLogo.png"]
+      ["images/ReactNativeLogo.png"],
+      true
     )
   );
 
@@ -214,7 +218,8 @@ export function getProjectData() {
       "https://www.youtube.com/embed/pucektir9Qo",
       null,
       ["images/RobotsAndThingsLogo.png", "images/RobotsAndThings0.png", "images/RobotsAndThings1.png"],
-      ["images/unrealLogo.png", null]
+      ["images/unrealLogo.png", null],
+      true
     )
   );
 
@@ -245,7 +250,7 @@ export function getProjectData() {
       false,
       "https://lasallecollectibles.com",
       null,
-      "A freelance website for a toy car collectibles business where users can browse toy cars for sale or even preview the car in real life with AR.",
+      "A website freelanced for a toy car collectibles business where users can browse toy cars for sale or even preview the car in real life with AR.",
       "This uses Next.js and React at the front end, and Neon for a serverless and low cost PostgreSQL database. The AR feature uses React Three Fiber and React Three XR.",
       null,
       "images/ToyCarCollectables/ToyCarCollectablesThumbnail.png",
@@ -255,7 +260,8 @@ export function getProjectData() {
         "images/ToyCarCollectables/ToyCarCollectables2.png",
         "images/ToyCarCollectables/ToyCarCollectables3.png",
       ],
-      ["images/ReactLogo.png", null]
+      ["images/ReactLogo.png", null],
+      true
     )
   );
 

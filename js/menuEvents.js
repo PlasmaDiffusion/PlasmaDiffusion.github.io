@@ -102,6 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
         archivedFilters.style.display = isOpen ? "none" : "block";
         button.innerHTML = isOpen ? "Other Projects ▼" : "Other Projects ▲";
       };
+      // Filter by framework type button
     } else if (button.className == "filter") {
       button.onclick = () => {
         filterProjectButton(button.value);

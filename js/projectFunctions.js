@@ -42,11 +42,25 @@ function generateProjectButton(project, parentId) {
   var newProjectImageButton =
     template.content.firstElementChild.cloneNode(true);
 
-  //Assign image (Either the thumbnail or the first preview image)
+  //Assign image thumbnail for project button (Either the thumbnail or the first preview image)
 
-  if (project.thumbnailString)
-    newProjectImageButton.children[0].src = project.thumbnailString;
-  else newProjectImageButton.children[0].src = project.imageStrings[0];
+
+  if (project.thumbnailString) //Data-src is used for lazy loading. Src will be set to that when the button is visible.
+    newProjectImageButton.children[0].setAttribute(
+      "data-src",
+      project.thumbnailString
+    );
+  else
+    newProjectImageButton.children[0].setAttribute(
+      "data-src",
+      project.imageStrings[0]
+    );
+
+  if (project.isFeatured) { //Src is used for featured projects that are visible from the get go.
+    if (project.thumbnailString)
+      newProjectImageButton.children[0].src = project.thumbnailString;
+    else newProjectImageButton.children[0].src = project.imageStrings[0];
+  }
 
   //Assign button value and text
   newProjectImageButton.children[1].value = project.id;
@@ -62,8 +76,11 @@ function generateProjectButton(project, parentId) {
   //Framework icon to attach to button
   newProjectImageButton.children[1].appendChild(frameworkIcon0);
 
-  newProjectImageButton.children[1].setAttribute('data-brief-description', project.description0.split('.')[0] + ".");
-  newProjectImageButton.querySelector('.projectLabel').innerHTML = project.name;
+  newProjectImageButton.children[1].setAttribute(
+    "data-brief-description",
+    project.description0.split(".")[0] + "."
+  );
+  newProjectImageButton.querySelector(".projectLabel").innerHTML = project.name;
 
   //The second framework icon is optional
   if (project.frameworkStrings[1])
@@ -110,13 +127,13 @@ function setLinks(newProjectWindow, project) {
   //Hide site/repository link if not there
   if (project.url) {
     links[0].href = project.url;
-    links[0].setAttribute('data-umami-event-url', project.url);
+    links[0].setAttribute("data-umami-event-url", project.url);
   } else {
     links[0].style = "display:none;";
   }
   if (project.repoLink) {
     links[1].href = project.repoLink;
-    links[1].setAttribute('data-umami-event-url', project.url);
+    links[1].setAttribute("data-umami-event-url", project.url);
   } else {
     links[1].style = "display:none;";
   }
@@ -191,8 +208,17 @@ export function filterProjectButton(frameworkImageToFilterBy) {
     ) {
       //Make the project button visible
       project.style.display = "block";
+      
+      //Lazy load in thumbnail images
+      images = project.getElementsByClassName("bigImg");
+      for (const img of images) {
+        console.log(img);
+        const dataSrc = img.getAttribute("data-src");
+        if (dataSrc && !img.src) img.src = dataSrc;
+      }
+
     } else {
-      //Hide the project button
+      //Hide the project button if it doesn't match the framework the filter button had
       project.style.display = "none";
     }
   }
@@ -207,5 +233,7 @@ function checkIfFrameworkIsUsed(images, frameworkImageToFilterBy) {
 }
 
 function checkIfProjectIsFeatured(featuredFilter, projectElement) {
-  return featuredFilter === "Featured" && projectElement.dataset.featured === "true";
+  return (
+    featuredFilter === "Featured" && projectElement.dataset.featured === "true"
+  );
 }

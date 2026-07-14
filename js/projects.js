@@ -161,7 +161,7 @@ export function getProjectData() {
       "Additionally there's a Flask backend for handling the advice. It pulls information from PubMed Central.",
 
       null,
-      "images/stretchAppThumbnail.png",
+      "images/StretchApp/stretchAppThumbnail.png",
       ["images/StretchApp/stretchApp2.png","images/StretchApp/stretchApp0.png","images/StretchApp/stretchApp3.png","images/StretchApp/stretchApp4.png"],
       ["images/ReactNativeLogo.png"],
       true

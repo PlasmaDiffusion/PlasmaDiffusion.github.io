@@ -129,13 +129,19 @@ function setLinks(newProjectWindow, project) {
     links[0].href = project.url;
     links[0].setAttribute("data-umami-event-url", project.url);
   } else {
-    links[0].style = "display:none;";
+    links[0].style.display = "none";
   }
   if (project.repoLink) {
     links[1].href = project.repoLink;
     links[1].setAttribute("data-umami-event-url", project.url);
   } else {
-    links[1].style = "display:none;";
+    links[1].style.display = "none";
+  }
+  if (project.figmaLink) {
+    links[2].href = project.figmaLink;
+    links[2].setAttribute("data-umami-event-url", project.figmaLink);
+  } else {
+    links[2].style.display = "none";
   }
 }
 

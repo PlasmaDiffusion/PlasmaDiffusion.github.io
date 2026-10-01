@@ -5,6 +5,7 @@ export class Project {
     isGame, //Boolean to hide if not the proper project
     url, //Site url
     repoLink, //Github link
+    figmaLink, //Figma design link
     description0,
     description1,
     videoString,
@@ -18,6 +19,7 @@ export class Project {
     this.isGame = isGame;
     this.url = url;
     this.repoLink = repoLink;
+    this.figmaLink = figmaLink;
     this.description0 = description0;
     this.description1 = description1;
     this.videoString = videoString;
@@ -39,6 +41,7 @@ export function getProjectData() {
       false,
       null,//"https://shopping-site-mockup.netlify.app/",
       "https://github.com/PlasmaDiffusion/Shopping-Site",
+      null,
       "A mockup for a shopping/ecommerce website. Users can search for products, add them to their cart and place an order. (Signing up is optional.)",
       "The project uses React at the frontend. It also uses NodeJS at the backend, using Sequelize to manage a MySQL database. TDD is additionally present, with Mocha and Testing Library.",
       null,
@@ -60,6 +63,7 @@ export function getProjectData() {
       false,
       null,
       "https://github.com/PlasmaDiffusion/PizzaMenu",
+      null,
       "A mockup website for ordering a pizza. Users can either browse the menu or login and add pizzas with toppings and additional items to their cart.",
       "This was made with the Django framework in python. The site also makes use of jQuery Mobile.",
       null,
@@ -81,6 +85,7 @@ export function getProjectData() {
       false,
       null,
       "https://github.com/PlasmaDiffusion/Crossword-Generator",
+      null,
       "A simple yet fun crossword puzzle generator. You can select how many words you want the crossword to have, and also only have specific categories. You can even add more words to the database it pulls from!",
       "NodeJS (with Express) and MongoDB is used to generate a crossword layout, that the user can then interact with at the front-end.",
       null,
@@ -102,6 +107,7 @@ export function getProjectData() {
       false,
       "https://genealogy-site.netlify.app/",
       "https://github.com/PlasmaDiffusion/Genealogy-Site",
+      null,
       "A genealogy based website made for a client. Admins can submit data on families and individual people through forms. On the home page you can select family names, then you select a sub family to see information about it and its family members.",
       "This project was made primarily to get acquainted with React. It also makes use of MongoDB with NodeJS. TDD is used too, with Mocha and Testing Library.",
       null,
@@ -123,6 +129,7 @@ export function getProjectData() {
       false,
       null,
       "https://github.com/PlasmaDiffusion/PaintOn",
+      null,
       "A browser based paint program. Users can try the paint tool out from the main page. They can login to save their drawings and check out other user's drawings as well.",
       "This project focuses a lot on javascript and the HTML5 canvas. The Django framework is used with an SQL database to share drawings as well.",
       null,
@@ -139,6 +146,7 @@ export function getProjectData() {
       false,
       "https://movie-rater-ts.netlify.app/",
       "https://github.com/PlasmaDiffusion/Movie-Rater",
+      null,
       "A site for you to review and rate movies. It used an external API to get actual movies and descriptions, but the site also uses GraphQL for its own movie reviews data.",
       "The project was made with React in the frontend (in Typescript), and NodeJS in the backend. Both ends use GraphQL (the front end uses Apollo).",
 
@@ -157,6 +165,7 @@ export function getProjectData() {
       false,
       null,
       "https://github.com/PlasmaDiffusion/StretchesV2",
+      null,
       "A React Native app that serves as a list and timer for stretch routines, plus physiotherapy advice via OpenAI which uses RAG to fetch from relevant articles. You can edit this list, change the timer per stretch, and link references to stretches.",
       "Additionally there's a Flask backend for handling the advice. It pulls information from PubMed Central.",
 
@@ -175,6 +184,7 @@ export function getProjectData() {
       false,
       "https://battle-clicker.netlify.app/",
       "https://github.com/PlasmaDiffusion/battle-clicker",
+      null,
       "A clicker idle game made in Angular using 8 bit rpgs as a baseline. Similar to other idle games you click a chest to generate gold and buy stuff that generates gold faster. The extra twist is you hire fighters to battle monsters for you, who have their own advantages against certain foes in battle. The game will ask to use your browser's cookies in order to save and load data.",
       "The purpose of the project was to get familiar with Angular and its components, mainly to get a feel of how the framework differs from React. A lot of the game is based around asynchronous setInterval events alongside click events.",
       null,
@@ -193,6 +203,7 @@ export function getProjectData() {
       false,
       "https://main.d2eaxfihz5qfr0.amplifyapp.com/",
       "https://github.com/PlasmaDiffusion/streamlined-dev-job-search",
+      null,
       "A site to track job applications and links for job searching. It displays a table of jobs you've applied for, auto fills data from job descriptions, allows you to save links and order them by click frequency, and also shows a graph for analytics of posted applications.",
       "This was made in Vue at the front end with D3.js to show graphs. At the back end it uses .NET and DynamoDB. (Usernames and dates are used as the primary and sort keys for job applications.) For the sake of demoing it, you can use this app as a guest to use the data publicly.",
       null,
@@ -213,6 +224,7 @@ export function getProjectData() {
       false,
       "https://plasmashadowstudios.github.io/Robots-And-Things",
       "https://github.com/PlasmaShadowStudios/Robots-And-Things",
+      "https://www.figma.com/design/us1jYf4NE8GB1diyxyiU9J/Robots---Things-Website?node-id=0-1&t=VzCo7oBHrcWx3z7i-1",
       "A 3D platformer game that mixes open exploration and linear score attack based levels together. I'm the programmer for this project, using the Unreal engine. I also have done a large chunk of the level design and overall game design.",
       "Additionally I developed a website about the game in Next.js, which posts updates based on messages gotten from the game's discord server, using discord's API. (The game's repo is private but you can look at the website's repo.)",
       "https://www.youtube.com/embed/pucektir9Qo",
@@ -230,6 +242,7 @@ export function getProjectData() {
       false,
       null,//"https://play.google.com/store/apps/details?id=com.PlasmaShadowGames.HypeSnake&hl=en_CA&gl=US",
       "https://github.com/PlasmaDiffusion/Snake-Adventure",
+      null,
       "A more action/adventure take on the classic snake game. Hyper Snake has you take the snake across various levels that require you to grow a certain size to reach the next one. You can unlock different level themes that alter the gameplay, as well as skins for the snake.",
       "This was made almost exclusively in Unity, save for a few assets. It makes use of a basic micro-transaction that disables ads.",
       "https://www.youtube.com/embed/j5O9KC4_5Q0",
@@ -249,6 +262,7 @@ export function getProjectData() {
       "Toy Car Collectibles",
       false,
       "https://lasallecollectibles.ca",
+      null,
       null,
       "A website freelanced for a toy car collectibles business where users can browse toy cars for sale or even preview the car in real life with AR.",
       "This uses Next.js and React at the front end, and Neon for a serverless and low cost PostgreSQL database. The AR feature uses React Three Fiber and React Three XR.",

@@ -128,6 +128,19 @@ document.addEventListener("DOMContentLoaded", () => {
   //Highlight the default filter
   document.getElementById("FeaturedFilter").className = "filter highlighted";
 
+  //Open a project when its name is provided in the URL, for example ?proj=Toy%20Car%20Collectibles.
+  const requestedProjectName = new URLSearchParams(window.location.search).get("proj");
+  if (requestedProjectName) {
+    const requestedProject = projects.find(
+      (project) => project.name === requestedProjectName
+    );
+    if (requestedProject) {
+      document.querySelectorAll(".btn, .bigBtn").forEach((button) => {
+        if (button.value === String(requestedProject.id)) button.click();
+      });
+    }
+  }
+
   //OnMouseOver events ---------------------------------------------------------------------------------------------
 
   //Get all preview images, and make their arrows visible only when hovered over

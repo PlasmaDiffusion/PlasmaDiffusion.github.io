@@ -284,7 +284,7 @@ export function getProjectData() {
       12,
       "Zombie House",
       true,
-      null,
+      "https://plasmadiffusion.itch.io/zombie-house",
       "https://github.com/PlasmaDiffusion/ZombieHouse",
       null,
       "A randomly generated top down zelda-like made in Godot.",

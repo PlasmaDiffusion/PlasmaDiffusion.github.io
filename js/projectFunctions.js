@@ -1,37 +1,8 @@
-//Use url to determine what projects are enabled
-function getEnabledProjectType() {
-  var urlArgs = window.location.search;
-
-  if (urlArgs.includes("all")) return "all";
-  else if (urlArgs.includes("games")) return "games";
-  else return "websites";
-}
-
 //Create a menu of projects to click on. Also create <div>s of "windows" for each project.
 export function useProjectDataToGenerateHTML(projects) {
-  var projType = getEnabledProjectType();
-
   projects.forEach((project) => {
-    if (projType == "all") {
-      //Make all menu buttons
-      generateProjectButton(
-        project,
-        project.isGame ? "gameProjectContainer" : "webProjectContainer"
-      );
-      generateProjectWindow(project);
-    } else if (projType == "websites") {
-      //Make website project buttons only
-      if (!project.isGame) {
-        generateProjectButton(project, "webProjectContainer");
-        generateProjectWindow(project);
-      }
-    } else if (projType == "games") {
-      //Make game project buttons only
-      if (project.isGame) {
-        generateProjectButton(project, "gameProjectContainer");
-        generateProjectWindow(project);
-      }
-    }
+    generateProjectButton(project, "webProjectContainer");
+    generateProjectWindow(project);
   });
 }
 
@@ -41,6 +12,7 @@ function generateProjectButton(project, parentId) {
   var parent = document.getElementById(parentId);
   var newProjectImageButton =
     template.content.firstElementChild.cloneNode(true);
+  newProjectImageButton.dataset.game = String(project.isGame === true);
 
   //Assign image thumbnail for project button (Either the thumbnail or the first preview image)
 
@@ -207,11 +179,12 @@ export function filterProjectButton(frameworkImageToFilterBy) {
   var projects = document.getElementsByClassName("projectBox");
   for (const project of projects) {
     var images = project.children[1].getElementsByTagName("img");
+    var matchesFilter = frameworkImageToFilterBy === "Games"
+      ? project.dataset.game === "true"
+      : checkIfFrameworkIsUsed(images, frameworkImageToFilterBy) ||
+        checkIfProjectIsFeatured(frameworkImageToFilterBy, project);
 
-    if (
-      checkIfFrameworkIsUsed(images, frameworkImageToFilterBy) ||
-      checkIfProjectIsFeatured(frameworkImageToFilterBy, project)
-    ) {
+    if (matchesFilter) {
       //Make the project button visible
       project.style.display = "block";
       

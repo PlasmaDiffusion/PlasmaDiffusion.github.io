@@ -221,7 +221,7 @@ export function getProjectData() {
     new Project(
       9,
       "Robots & Things",
-      false,
+      true,
       "https://plasmashadowstudios.github.io/Robots-And-Things",
       "https://github.com/PlasmaShadowStudios/Robots-And-Things",
       "https://www.figma.com/design/us1jYf4NE8GB1diyxyiU9J/Robots---Things-Website?node-id=0-1&t=VzCo7oBHrcWx3z7i-1",
@@ -239,7 +239,7 @@ export function getProjectData() {
     new Project(
       10,
       "Hyper Snake",
-      false,
+      true,
       null,//"https://play.google.com/store/apps/details?id=com.PlasmaShadowGames.HypeSnake&hl=en_CA&gl=US",
       "https://github.com/PlasmaDiffusion/Snake-Adventure",
       null,

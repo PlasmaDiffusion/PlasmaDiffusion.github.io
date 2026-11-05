@@ -10,35 +10,6 @@ export function ChangeClassDisplay(className, display) {
   for (let i = 0; i < elements.length; i++) elements[i].style.display = display;
 }
 
-//Use the url to either display web apps, games or both project types
-export function HideProjectsBasedOnURL() {
-  var url = window.location.search;
-
-  var introParagraph = document.getElementById("intro");
-  var title = document.getElementById("title");
-
-  //Show websites and games?
-  if (url.includes("all")) {
-    title.innerHTML = "Full Stack Developer / Game Programmer";
-    introParagraph.innerHTML =
-      "Welcome to my portfolio. I'm an experienced programmer in game development.";
-  } else if (url.includes("games")) {
-    //Show games only
-    title.innerHTML = "Game Programmer";
-    introParagraph.innerHTML =
-      "Welcome to my portfolio. I'm skilled in game and web development.";
-
-    ChangeElementDisplay("webIcons", "none");
-
-    ChangeElementDisplay("websitesOnly", "none");
-  } else {
-    //Show websites only
-    ChangeElementDisplay("gameIcons", "none");
-
-    ChangeElementDisplay("gamesOnly", "none");
-  }
-}
-
 //When a preview button is clicked (for images or videos), find the html elements that have said preview data.
 export function ChangePreviewImage(button) {
   //Now find the hidden <p>s that contain image or video data

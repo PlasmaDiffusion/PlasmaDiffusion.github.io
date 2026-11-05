@@ -6,7 +6,6 @@ import {
   ChangeClassDisplay,
   MakeArrowsInvisible,
   MakeArrowsVisible,
-  HideProjectsBasedOnURL,
 } from "./menuFunctions.js";
 
 import { getProjectData } from "./projects.js";
@@ -14,9 +13,6 @@ import { getProjectData } from "./projects.js";
 import { useProjectDataToGenerateHTML, filterProjectButton } from "./projectFunctions.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  //Show stuff based on the URL
-  HideProjectsBasedOnURL();
-
   var projects = getProjectData();
   useProjectDataToGenerateHTML(projects);
 
@@ -107,17 +103,11 @@ document.addEventListener("DOMContentLoaded", () => {
       button.onclick = () => {
         filterProjectButton(button.value);
         //Un highlight other filter buttons
-        document.getElementById("FeaturedFilter").className = "filter";
-        document.getElementById("GraphQLFilter").className = "filter";
-        document.getElementById("ReactFilter").className = "filter";
-        document.getElementById("VueFilter").className = "filter";
-        document.getElementById("ReactNativeFilter").className = "filter";
-        document.getElementById("AngularFilter").className = "filter";
-        document.getElementById("DjangoFilter").className = "filter";
-        document.getElementById("NodeJSFilter").className = "filter";
-        document.getElementById("NetFilter").className = "filter";
-        document.getElementById("UnrealFilter").className = "filter";
-        document.getElementById("UnityFilter").className = "filter";
+        document.querySelectorAll(".filter").forEach((filterButton) => {
+          if (filterButton.id !== "OtherProjectsToggle") {
+            filterButton.className = "filter";
+          }
+        });
 
         //Highlight the button that was just clicked
         button.className = "filter highlighted";

@@ -289,10 +289,10 @@ export function getProjectData() {
       null,
       "A randomly generated top down zelda-like made in Godot.",
       "This randomly generates a map layout and uses a breadth-first search algorithm to place the goal in a far off room.",
-      null,
+      "https://www.youtube.com/embed/wV3vaGoj7nA?si=n1gEqB1ZaKbQSt8z",
       "images/ZombieHouse/ZombieHouseTitle.png",
       [
-        "images/ZombieHouse/ZombieHouse0.png",
+        "images/ZombieHouse/ZombieHouse1.png","images/ZombieHouse/ZombieHouse0.png",
       ],
       ["images/GodotLogo.png", null],
       false

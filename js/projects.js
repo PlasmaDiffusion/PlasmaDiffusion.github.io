@@ -295,7 +295,7 @@ export function getProjectData() {
         "images/ZombieHouse/ZombieHouse0.png",
       ],
       ["images/GodotLogo.png", null],
-      true
+      false
     )
   );
 

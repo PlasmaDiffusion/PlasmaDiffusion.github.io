@@ -16,7 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
   var projects = getProjectData();
   useProjectDataToGenerateHTML(projects);
 
-  filterProjectButton("Featured");
+  const defaultFilterButton = document.getElementById("FeaturedFilter");
+  const selectedFilterButton = getFilterButtonFromURL() || defaultFilterButton;
+  filterProjectButton(selectedFilterButton.value);
 
   //Button click events ---------------------------------------------------------------------------------------------
 
@@ -115,8 +117,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  //Highlight the default filter
-  document.getElementById("FeaturedFilter").className = "filter highlighted";
+  //Highlight the filter selected by the URL, or Featured by default.
+  selectedFilterButton.className = "filter highlighted";
 
   //Open a project when its name is provided in the URL, for example ?proj=Toy%20Car%20Collectibles.
   const requestedProjectName = new URLSearchParams(window.location.search).get("proj");
@@ -146,3 +148,25 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   });
 });
+
+function getFilterButtonFromURL() {
+  const params = new URLSearchParams(window.location.search);
+  const queryTerms = [];
+
+  for (const [key, value] of params) {
+    queryTerms.push(key.toLowerCase(), value.toLowerCase());
+  }
+
+  return Array.from(document.querySelectorAll("button.filter")).find((button) => {
+    if (button.id === "OtherProjectsToggle") return false;
+
+    const candidates = [
+      button.value,
+      button.id,
+      button.id.replace(/Filter$/, ""),
+      button.textContent,
+    ].map((candidate) => candidate.trim().toLowerCase());
+
+    return candidates.some((candidate) => candidate && queryTerms.includes(candidate));
+  });
+}

@@ -13,6 +13,7 @@ function generateProjectButton(project, parentId) {
   var newProjectImageButton =
     template.content.firstElementChild.cloneNode(true);
   newProjectImageButton.dataset.game = String(project.isGame === true);
+  newProjectImageButton.dataset.featured = String(project.isFeatured === true);
 
   //Assign image thumbnail for project button (Either the thumbnail or the first preview image)
 
@@ -37,8 +38,6 @@ function generateProjectButton(project, parentId) {
   //Assign button value and text
   newProjectImageButton.children[1].value = project.id;
   newProjectImageButton.children[1].innerHTML = project.name;
-  if (project.isFeatured) newProjectImageButton.dataset.featured = "true";
-
   //Show framework icon over the button
   var frameworkIcon0 = newProjectImageButton.children[2];
   var frameworkIcon1 = newProjectImageButton.children[3];
@@ -181,8 +180,9 @@ export function filterProjectButton(frameworkImageToFilterBy) {
     var images = project.children[1].getElementsByTagName("img");
     var matchesFilter = frameworkImageToFilterBy === "Games"
       ? project.dataset.game === "true"
-      : checkIfFrameworkIsUsed(images, frameworkImageToFilterBy) ||
-        checkIfProjectIsFeatured(frameworkImageToFilterBy, project);
+      : frameworkImageToFilterBy === "Featured"
+        ? project.dataset.featured === "true"
+        : checkIfFrameworkIsUsed(images, frameworkImageToFilterBy);
 
     if (matchesFilter) {
       //Make the project button visible
@@ -208,11 +208,5 @@ function checkIfFrameworkIsUsed(images, frameworkImageToFilterBy) {
   return (
     (images[0] && images[0].src.includes(frameworkImageToFilterBy)) ||
     (images[1] && images[1].src.includes(frameworkImageToFilterBy))
-  );
-}
-
-function checkIfProjectIsFeatured(featuredFilter, projectElement) {
-  return (
-    featuredFilter === "Featured" && projectElement.dataset.featured === "true"
   );
 }

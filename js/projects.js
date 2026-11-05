@@ -279,5 +279,25 @@ export function getProjectData() {
     )
   );
 
+    projects.push(
+    new Project(
+      12,
+      "Zombie House",
+      true,
+      null,
+      "https://github.com/PlasmaDiffusion/ZombieHouse",
+      null,
+      "A randomly generated top down zelda-like made in Godot.",
+      "This randomly generates a map layout and uses a breadth-first search algorithm to place the goal in a far off room.",
+      null,
+      "images/ZombieHouse/ZombieHouseTitle.png",
+      [
+        "images/ZombieHouse/ZombieHouse0.png",
+      ],
+      ["images/GodotLogo.png", null],
+      true
+    )
+  );
+
   return projects;
 }
